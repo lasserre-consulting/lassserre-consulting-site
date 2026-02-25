@@ -13,7 +13,6 @@ import { CommonModule } from '@angular/common';
         <h2 class="section-title">Les outils de mon quotidien</h2>
         <p class="section-subtitle">Des technologies éprouvées pour des architectures robustes et scalables.</p>
 
-        <!-- Category groups -->
         <div class="categories">
           <div class="category" *ngFor="let category of categories">
             <h3 class="category-title">{{ category.label }}</h3>
@@ -34,8 +33,6 @@ import { CommonModule } from '@angular/common';
     </section>
   `,
   styles: [`
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500&display=swap');
-
     :host {
       --bg: #080f1e;
       --card-bg: rgba(255, 255, 255, 0.03);
@@ -52,7 +49,6 @@ import { CommonModule } from '@angular/common';
       overflow: hidden;
     }
 
-    /* Subtle grid texture */
     .stack-section::before {
       content: '';
       position: absolute;
@@ -71,7 +67,6 @@ import { CommonModule } from '@angular/common';
       text-align: center;
     }
 
-    /* ── Header ── */
     .section-badge {
       display: inline-block;
       font-size: 0.72rem;
@@ -101,7 +96,6 @@ import { CommonModule } from '@angular/common';
       margin: 0 0 3.5rem;
     }
 
-    /* ── Categories ── */
     .categories {
       display: flex;
       flex-direction: column;
@@ -115,7 +109,6 @@ import { CommonModule } from '@angular/common';
       text-transform: uppercase;
       color: var(--text-muted);
       margin: 0 0 1.25rem;
-      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -131,7 +124,16 @@ import { CommonModule } from '@angular/common';
       background: rgba(255,255,255,0.07);
     }
 
-    /* ── Tech Grid ── */
+    /* La catégorie IA a un divider légèrement coloré */
+    .category:last-child .category-title {
+      color: #a78bfa;
+    }
+
+    .category:last-child .category-title::before,
+    .category:last-child .category-title::after {
+      background: rgba(139, 92, 246, 0.2);
+    }
+
     .tech-grid {
       display: flex;
       flex-wrap: wrap;
@@ -159,9 +161,7 @@ import { CommonModule } from '@angular/common';
       background: color-mix(in srgb, var(--accent) 6%, transparent);
     }
 
-    .tech-card:hover .tech-glow {
-      opacity: 1;
-    }
+    .tech-card:hover .tech-glow { opacity: 1; }
 
     .tech-glow {
       position: absolute;
@@ -179,10 +179,7 @@ import { CommonModule } from '@angular/common';
       flex-shrink: 0;
     }
 
-    .tech-icon svg {
-      width: 22px;
-      height: 22px;
-    }
+    .tech-icon svg { width: 22px; height: 22px; }
 
     .tech-name {
       font-size: 0.88rem;
@@ -191,7 +188,6 @@ import { CommonModule } from '@angular/common';
       white-space: nowrap;
     }
 
-    /* ── Responsive ── */
     @media (max-width: 480px) {
       .stack-section { padding: 4rem 1.25rem; }
       .tech-card { padding: 0.65rem 1rem; }
@@ -234,6 +230,11 @@ export class Stack {
           color: '#3178c6',
           icon: `<svg viewBox="0 0 24 24" fill="#3178c6" xmlns="http://www.w3.org/2000/svg"><path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.255a1.07 1.07 0 0 0 .368-.39.999.999 0 0 0 .12-.49c0-.219-.063-.41-.187-.572a2.105 2.105 0 0 0-.503-.432 9.48 9.48 0 0 0-.753-.382 28.508 28.508 0 0 0-.932-.405c-.47-.197-.893-.407-1.268-.629a4.624 4.624 0 0 1-.964-.753 3.23 3.23 0 0 1-.615-.956 3.497 3.497 0 0 1-.213-1.254c0-.632.116-1.167.35-1.604.232-.438.546-.798.94-1.081a3.89 3.89 0 0 1 1.352-.606 6.116 6.116 0 0 1 1.586-.196zm-6.97.088l.01 2.484H9.037V20.8h-2.91V12.32H3.82V9.838z"/></svg>`
         },
+        {
+          name: 'Vue.js',
+          color: '#42b883',
+          icon: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 1.61h-9.94L12 5.16 9.94 1.61H0l12 20.78zM12 14.08L5.16 2.23H9.1L12 7.41l2.9-5.18h3.94z" fill="#42b883"/><path d="M0 1.61l12 20.78L24 1.61h-4.67L12 14.08 4.67 1.61z" fill="#42b883" opacity="0.5"/></svg>`
+        },
       ]
     },
     {
@@ -253,6 +254,26 @@ export class Stack {
           name: 'CI/CD',
           color: '#fc6d26',
           icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#fc6d26" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>`
+        },
+      ]
+    },
+    {
+      label: 'IA & Automatisation',
+      techs: [
+        {
+          name: 'Claude',
+          color: '#cc785c',
+          icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#cc785c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M8 12h8M12 8l4 4-4 4"/></svg>`
+        },
+        {
+          name: 'ChatGPT',
+          color: '#10a37f',
+          icon: `<svg viewBox="0 0 24 24" fill="#10a37f" xmlns="http://www.w3.org/2000/svg"><path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073zM13.26 22.43a4.476 4.476 0 0 1-2.876-1.04l.141-.081 4.779-2.758a.795.795 0 0 0 .392-.681v-6.737l2.02 1.168a.071.071 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494zM3.6 18.304a4.47 4.47 0 0 1-.535-3.014l.142.085 4.783 2.759a.771.771 0 0 0 .78 0l5.843-3.369v2.332a.08.08 0 0 1-.033.062L9.74 19.95a4.5 4.5 0 0 1-6.14-1.646zM2.34 7.896a4.485 4.485 0 0 1 2.366-1.973V11.6a.766.766 0 0 0 .388.676l5.815 3.355-2.02 1.168a.076.076 0 0 1-.071 0L4.01 14.032A4.505 4.505 0 0 1 2.34 7.896zm16.597 3.855l-5.843-3.368 2.019-1.164a.076.076 0 0 1 .071 0l4.815 2.778a4.504 4.504 0 0 1-.67 8.127V12.56a.786.786 0 0 0-.392-.81zm2.01-3.023l-.141-.085-4.774-2.782a.776.776 0 0 0-.785 0L9.409 9.23V6.897a.066.066 0 0 1 .028-.061l4.814-2.772a4.5 4.5 0 0 1 6.68 4.66zm-12.64 4.135l-2.02-1.164a.08.08 0 0 1-.038-.057V6.075a4.5 4.5 0 0 1 7.375-3.453l-.142.08L8.704 5.46a.795.795 0 0 0-.393.681zm1.097-2.365l2.602-1.5 2.607 1.5v2.999l-2.597 1.5-2.607-1.5z"/></svg>`
+        },
+        {
+          name: 'Cursor',
+          color: '#8b5cf6',
+          icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l7.5 18 3-7.5L21 10.5z"/><path d="M13.5 13.5L21 21"/></svg>`
         },
       ]
     },
