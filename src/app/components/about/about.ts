@@ -350,28 +350,28 @@ import { CommonModule } from '@angular/common';
 export class About {
   stats = [
     { value: '9 ans', label: "d'expérience en développement" },
-    { value: '20+',   label: 'projets livrés en production' },
-    { value: '100%',  label: 'missions longue durée' },
+    { value: 'Priorité',   label: 'sur les bonnes pratiques' },
+    { value: '100%',  label: 'Fullstack pratiqué' },
   ];
 
   timeline = [
-    {
-      period: '2016 – 2021',
-      tag: 'Consultant',
-      title: 'ESN — Conseil & Intégration',
-      description: 'Missions variées en Java / Angular chez des clients grands comptes. Montée en compétences sur l\'architecture microservices et la CI/CD.',
-    },
-    {
-      period: '2021 – 2025',
-      tag: 'Client final',
-      title: 'Tech Lead — Produit SaaS',
-      description: 'Responsable architecture et delivery pour une plateforme à fort trafic. Encadrement d\'une équipe de 6 développeurs.',
-    },
     {
       period: '2025 – présent',
       tag: 'Freelance',
       title: 'Consultant indépendant',
       description: 'Missions longue durée en tant que Tech Lead ou développeur senior. Focus sur la performance, la qualité et la valeur produit.',
+    },
+    {
+      period: '2021 – 2025',
+      tag: 'Consultant',
+      title: 'ESN — Conseil & Intégration',
+      description: 'Missions variées en Java / Angular / VueJS chez des clients grands comptes.',
+    },
+    {
+      period: '2016 – 2021',
+      tag: 'Client final',
+      title: 'Développeur Fullstack',
+      description: 'Développement, maintenance et déploiement d\'une quarantaine de projets au sein d\'une startup de 6 personnes en charge de l\'intégralité du périmètre métier.',
     },
   ];
 
