@@ -132,10 +132,12 @@ import { NgOptimizedImage } from '@angular/common';
 
     /* ── Container ── */
     .contact-container {
-      position: relative;
       max-width: 600px;
       margin: 0 auto;
       text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 1.5rem;
     }
 
     /* ── Badge ── */
@@ -191,6 +193,10 @@ import { NgOptimizedImage } from '@angular/common';
       transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
       position: relative;
       overflow: hidden;
+      box-sizing: border-box;
+      max-width: 100%;
+      width: fit-content;
+      align-self: center;
     }
 
     .cta-button::after {
@@ -327,6 +333,25 @@ import { NgOptimizedImage } from '@angular/common';
     /* ── Responsive ── */
     @media (max-width: 480px) {
       .contact-section { padding: 5rem 1.25rem; }
+
+      /* Correction iOS bouton */
+      .cta-button {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+        box-sizing: border-box;
+      }
+
+      /* Correction iOS social cards */
+      .social-links {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .social-card {
+        box-sizing: border-box;
+        width: 100%;
+      }
     }
   `]
 })
