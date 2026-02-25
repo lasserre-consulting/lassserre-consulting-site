@@ -28,80 +28,6 @@ import { NgOptimizedImage } from '@angular/common';
           Disponible pour de nouvelles missions
         </div>
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140" width="200" height="140">
-          <defs>
-            <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
-            </linearGradient>
-            <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" style="stop-color:#93c5fd;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
-            </linearGradient>
-          </defs>
-
-          <!-- Icon: stylised "AL" monogram inside a diamond -->
-          <g transform="translate(100, 44)">
-            <!-- Diamond shape -->
-            <polygon
-              points="0,-36 32,0 0,36 -32,0"
-              fill="none"
-              stroke="url(#blueGrad)"
-              stroke-width="2"
-            />
-            <!-- Inner diamond (smaller) -->
-            <polygon
-              points="0,-28 24,0 0,28 -24,0"
-              fill="url(#blueGrad)"
-              opacity="0.12"
-            />
-
-            <!-- "A" left stroke -->
-            <line x1="-13" y1="14" x2="0" y2="-14" stroke="url(#blueGrad)" stroke-width="2.2" stroke-linecap="round"/>
-            <!-- "A" right stroke -->
-            <line x1="0" y1="-14" x2="13" y2="14" stroke="url(#blueGrad)" stroke-width="2.2" stroke-linecap="round"/>
-            <!-- "A" crossbar -->
-            <line x1="-7" y1="4" x2="7" y2="4" stroke="url(#blueGrad)" stroke-width="1.8" stroke-linecap="round"/>
-
-            <!-- "L" vertical -->
-            <line x1="0" y1="-14" x2="0" y2="14" stroke="url(#accentGrad)" stroke-width="2.2" stroke-linecap="round" opacity="0"/>
-
-            <!-- Corner dots at diamond tips -->
-            <circle cx="0"  cy="-36" r="2.2" fill="#3b82f6"/>
-            <circle cx="32" cy="0"   r="2.2" fill="#3b82f6"/>
-            <circle cx="0"  cy="36"  r="2.2" fill="#3b82f6"/>
-            <circle cx="-32" cy="0" r="2.2" fill="#3b82f6"/>
-          </g>
-
-          <!-- Horizontal rule -->
-          <line x1="32" y1="92" x2="168" y2="92" stroke="#3b82f6" stroke-width="0.75" opacity="0.4"/>
-
-          <!-- "LASSERRE" -->
-          <text
-            x="100"
-            y="110"
-            text-anchor="middle"
-            font-family="Georgia, 'Times New Roman', serif"
-            font-size="16"
-            font-weight="700"
-            letter-spacing="5"
-            fill="url(#blueGrad)"
-          >LASSERRE</text>
-
-          <!-- "CONSULTING" -->
-          <text
-            x="100"
-            y="126"
-            text-anchor="middle"
-            font-family="Georgia, 'Times New Roman', serif"
-            font-size="8"
-            font-weight="400"
-            letter-spacing="4.5"
-            fill="#93c5fd"
-            opacity="0.85"
-          >CONSULTING</text>
-        </svg>
-
         <!-- Name -->
         <h1 class="hero-name">{{ name }}</h1>
 
@@ -244,7 +170,7 @@ import { NgOptimizedImage } from '@angular/common';
     .hero-container {
       position: relative;
       max-width: 720px;
-      padding: 2rem;
+      padding: 1rem;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -294,7 +220,11 @@ import { NgOptimizedImage } from '@angular/common';
     /* ── Photo ── */
     .photo-wrapper {
       position: relative;
-      width: 180px; height: 180px;
+      width: 180px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .photo {
@@ -305,22 +235,31 @@ import { NgOptimizedImage } from '@angular/common';
       position: relative;
       z-index: 2;
       border: 3px solid rgba(255,255,255,0.1);
+      display: block;
     }
 
     .photo-ring {
       position: absolute;
-      inset: -8px;
+      top: 50%;
+      left: 50%;
+      width: calc(100% + 16px);
+      height: calc(100% + 16px);
+      transform: translate(-50%, -50%);
       border-radius: 50%;
       border: 2px dashed rgba(59, 130, 246, 0.35);
       animation: spin 20s linear infinite;
-      z-index: 1;
+      z-index: 3;
     }
 
-    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
 
     .photo-glow {
       position: absolute;
-      inset: -20px;
+      top: 50%;
+      left: 50%;
+      width: calc(100% + 40px);
+      height: calc(100% + 40px);
+      transform: translate(-50%, -50%);
       border-radius: 50%;
       background: radial-gradient(circle, var(--accent-glow), transparent 70%);
       z-index: 0;
@@ -475,8 +414,29 @@ import { NgOptimizedImage } from '@angular/common';
 
     /* ── Responsive ── */
     @media (max-width: 480px) {
-      .hero-ctas { flex-direction: column; align-items: center; }
-      .cta-primary, .cta-secondary { width: 100%; justify-content: center; }
+      .hero-ctas {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+
+      .cta-primary,
+      .cta-secondary,
+      .cta-pdf {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+      }
+
+      .hero-roles {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.1rem;
+      }
+
+      .separator {
+        display: none;
+      }
     }
   `]
 })
