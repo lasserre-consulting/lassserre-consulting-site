@@ -244,7 +244,7 @@ import { NgOptimizedImage } from '@angular/common';
     .hero-container {
       position: relative;
       max-width: 720px;
-      padding: 2rem;
+      padding: 1rem;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -294,7 +294,11 @@ import { NgOptimizedImage } from '@angular/common';
     /* ── Photo ── */
     .photo-wrapper {
       position: relative;
-      width: 180px; height: 180px;
+      width: 180px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .photo {
@@ -305,22 +309,31 @@ import { NgOptimizedImage } from '@angular/common';
       position: relative;
       z-index: 2;
       border: 3px solid rgba(255,255,255,0.1);
+      display: block;
     }
 
     .photo-ring {
       position: absolute;
-      inset: -8px;
+      top: 50%;
+      left: 50%;
+      width: calc(100% + 16px);
+      height: calc(100% + 16px);
+      transform: translate(-50%, -50%);
       border-radius: 50%;
       border: 2px dashed rgba(59, 130, 246, 0.35);
       animation: spin 20s linear infinite;
-      z-index: 1;
+      z-index: 3;
     }
 
-    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
 
     .photo-glow {
       position: absolute;
-      inset: -20px;
+      top: 50%;
+      left: 50%;
+      width: calc(100% + 40px);
+      height: calc(100% + 40px);
+      transform: translate(-50%, -50%);
       border-radius: 50%;
       background: radial-gradient(circle, var(--accent-glow), transparent 70%);
       z-index: 0;
@@ -475,8 +488,29 @@ import { NgOptimizedImage } from '@angular/common';
 
     /* ── Responsive ── */
     @media (max-width: 480px) {
-      .hero-ctas { flex-direction: column; align-items: center; }
-      .cta-primary, .cta-secondary { width: 100%; justify-content: center; }
+      .hero-ctas {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+
+      .cta-primary,
+      .cta-secondary,
+      .cta-pdf {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+      }
+
+      .hero-roles {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.1rem;
+      }
+
+      .separator {
+        display: none;
+      }
     }
   `]
 })
