@@ -138,6 +138,9 @@ import { NgOptimizedImage } from '@angular/common';
       width: 100%;
       box-sizing: border-box;
       padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     /* ── Badge ── */
@@ -197,6 +200,7 @@ import { NgOptimizedImage } from '@angular/common';
       max-width: 100%;
       width: fit-content;
       align-self: center;
+      margin: 0 auto;
     }
 
     .cta-button::after {
