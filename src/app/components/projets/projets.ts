@@ -19,7 +19,26 @@ export class Projets {
       tags: ['Next.js', 'TypeScript', 'PostgreSQL', 'IA', 'SaaS'],
     },
     {
-      color: '#2563eb',
+      color: '#059669',
+      title: 'Normance',
+      description: $localize`:@@projets.normance.desc:Webservice REST B2B de génération automatique de certificats RSE/CSRD pour produits reconditionnés. Calcul d'impact carbone ADEME, facturation à l'usage, multi-tenant.`,
+      tags: ['Node.js', 'TypeScript', 'Fastify', 'PostgreSQL', 'BullMQ', 'Redis'],
+    },
+    {
+      color: '#dc2626',
+      title: 'Legacode',
+      description: $localize`:@@projets.legacode.desc:Plateforme d'audit de code universelle — tous langages, tous legacy. Zéro IA ne traite le code client (RGPD, NDA). Suppression certifiée SHA-256 avec attestation PDF horodatée.`,
+      tags: ['Java 25', 'Spring Boot', 'Next.js', 'SonarQube', 'MinIO'],
+    },
+    {
+      color: '#ec4899',
+      title: 'Knido',
+      url: 'https://knido.fr',
+      description: $localize`:@@projets.knido.desc:Plateforme communautaire et marketplace pour les arts textiles. Catalogue de patrons, abonnement Premium et application mobile native iOS/Android.`,
+      tags: ['Next.js', 'Expo', 'TypeScript', 'tRPC', 'Stripe'],
+    },
+    {
+      color: '#f59e0b',
       title: 'Mission Tracker',
       url: 'https://lasserre-consulting.fr/mission-tracker/',
       description: $localize`:@@projets.mission.desc:Agrégateur de missions freelance scraping 24 plateformes en temps réel. Centralise les offres, dédoublonne et présente un flux unifié de missions.`,

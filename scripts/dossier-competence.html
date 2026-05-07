@@ -407,21 +407,6 @@
       </div>
     </div>
 
-    <!-- Projets personnels -->
-    <div class="section">
-      <div class="projects-box">
-        <div class="projects-box-title">Projets personnels</div>
-        <div class="projects-box-content">
-          <strong>Knido.fr</strong> <span style="color:#94a3b8; font-size:9pt;">(en production)</span>
-          &nbsp;&nbsp;·&nbsp;&nbsp; Plateforme SaaS communautaire (tricot / crochet / patrons) &nbsp;&nbsp;·&nbsp;&nbsp; Web + Mobile
-          <br>
-          <span style="color:#64748b; font-size:9pt;">
-            Next.js &nbsp;·&nbsp; React &nbsp;·&nbsp; TypeScript &nbsp;·&nbsp; tRPC &nbsp;·&nbsp; PostgreSQL &nbsp;·&nbsp; Drizzle ORM &nbsp;·&nbsp; NextAuth &nbsp;·&nbsp; Stripe &nbsp;·&nbsp; AWS S3 &nbsp;·&nbsp; React Native / Expo
-          </span>
-        </div>
-      </div>
-    </div>
-
     <!-- Formations & Certifications -->
     <div class="section">
       <div class="section-title">Formations &amp; Certifications</div>
@@ -464,7 +449,156 @@
 
 
 <!-- ══════════════════════════════════════════════════════
-     PAGE 2 — DATARAXYS / NUAMOUV (2024–2025)
+     PAGE 2 — PROJETS PERSONNELS (part 1)
+══════════════════════════════════════════════════════ -->
+<div class="page">
+
+  <div class="exp-header">
+    <div class="exp-header-ala">ALA</div>
+    <div class="exp-header-client">Projets personnels</div>
+    <div class="exp-header-role">
+      Tech Lead Fullstack — Indépendant
+      <span class="sep">·</span>
+      janv. 2026 → maintenant
+    </div>
+  </div>
+
+  <div class="exp-content">
+
+    <div class="a4u-intro">
+      Conception et développement de produits SaaS complets en autonomie totale — de l'architecture au déploiement.
+      Workflow Claude Code systématique sur l'ensemble des projets : pair-programming, génération de tests, refactoring, revues automatisées, conventions documentées via CLAUDE.md / AGENTS.md.
+    </div>
+
+    <!-- Entrevia -->
+    <div class="mission-block">
+      <div class="mission-client">Entrevia <span style="color:#64748b; font-weight:400; font-size:10pt;">— entrevia.dev</span></div>
+      <div class="mission-meta">SaaS de préparation aux entretiens techniques pour développeurs</div>
+      <div class="mission-desc">
+        Flashcards en répétition espacée, simulation d'entretien avec scoring IA, abonnements Stripe et extension Chrome. 100+ stacks couvertes (Java, Angular, React, Kotlin, DevOps, IA…).
+      </div>
+      <ul class="realisations-list">
+        <li><strong>Intégration LLM en production :</strong> scoring batch des réponses via Claude Haiku 4.5 (Anthropic SDK), prompt engineering adaptatif selon la difficulté (junior/mid/senior), extraction structurée de stacks depuis offres PDF, gestion des quotas et garde-fous coûts.</li>
+        <li><strong>Sécurité &amp; paiement :</strong> Auth.js v5 (Google / GitHub OAuth + magic link), webhooks Stripe avec gestion des plans et bonus packs, guards backend pour fonctionnalités premium.</li>
+        <li><strong>Conception bout-en-bout :</strong> architecture, modèle de données (Drizzle + PostgreSQL 17), API type-safe tRPC, i18n FR/EN, PWA offline-first, déploiement VPS (nginx reverse proxy + cache).</li>
+      </ul>
+      <div class="tags-container">
+        <span class="tag">Next.js 16</span><span class="tag">TypeScript</span><span class="tag">tRPC</span>
+        <span class="tag">Drizzle</span><span class="tag">PostgreSQL</span><span class="tag">Anthropic SDK</span>
+        <span class="tag">Stripe</span><span class="tag">Auth.js</span><span class="tag">Docker</span>
+        <span class="tag">nginx</span><span class="tag">Sentry</span><span class="tag">Playwright</span>
+        <span class="tag">Vitest</span><span class="tag">Claude Code</span>
+      </div>
+    </div>
+
+    <!-- Normance -->
+    <div class="mission-block">
+      <div class="mission-client">Normance</div>
+      <div class="mission-meta">Webservice REST B2B — génération automatique de certificats RSE/CSRD pour produits reconditionnés</div>
+      <div class="mission-desc">
+        Calcul d'impact carbone ADEME, facturation à l'usage, multi-tenant. Présentation réalisée auprès du n°2 européen du reconditionné informatique.
+      </div>
+      <ul class="realisations-list">
+        <li><strong>API production-ready :</strong> authentification par clés API multi-tenants, rate limiting par plan, webhooks signés, génération PDF à la volée (Puppeteer + QR code), endpoints batch jusqu'à 100 certificats, documentation Swagger auto-générée.</li>
+        <li><strong>Robustesse &amp; exploitation :</strong> queues asynchrones BullMQ + Redis, 36 tests d'intégration Jest, validation Zod sur tous les endpoints, monitoring santé, helmet + CORS.</li>
+      </ul>
+      <div class="tags-container">
+        <span class="tag">Node.js</span><span class="tag">TypeScript</span><span class="tag">Fastify</span>
+        <span class="tag">Prisma</span><span class="tag">PostgreSQL</span><span class="tag">BullMQ</span>
+        <span class="tag">Redis</span><span class="tag">Puppeteer</span><span class="tag">Jest</span>
+        <span class="tag">Zod</span><span class="tag">Swagger</span><span class="tag">Claude Code</span>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /page 2 — projets persos part 1 -->
+
+
+<!-- ══════════════════════════════════════════════════════
+     PAGE 3 — PROJETS PERSONNELS (part 2)
+══════════════════════════════════════════════════════ -->
+<div class="page">
+
+  <div class="suite-header">
+    <div class="suite-header-label">ALA</div>
+    <div class="suite-header-client">Projets personnels — suite</div>
+    <div class="suite-header-period">
+      Tech Lead Fullstack — Indépendant
+      <span class="sep">·</span>
+      janv. 2026 → maintenant
+    </div>
+  </div>
+
+  <div class="exp-content">
+
+    <!-- Legacode -->
+    <div class="mission-block">
+      <div class="mission-client">Legacode</div>
+      <div class="mission-meta">Plateforme SaaS d'audit de code — tous langages, tous legacy, toutes versions</div>
+      <div class="mission-desc">
+        Audit de code universel avec validation experte humaine. Proposition différenciante : <strong>zéro IA ne traite le code client</strong> (RGPD, NDA, secteurs réglementés). Suppression certifiée SHA-256 avec attestation PDF horodatée.
+      </div>
+      <ul class="realisations-list">
+        <li><strong>Orchestration multi-outils :</strong> pipeline SonarQube + Semgrep + OWASP Dependency-Check + Trivy, détection automatique des technologies, rapport expert PDF généré à l'issue de chaque mission.</li>
+        <li><strong>Infrastructure souveraine OVH :</strong> stockage client sur MinIO self-hosted (code ne quitte pas l'infrastructure), traçabilité complète upload → analyse → suppression, hash SHA-256 vérifié à chaque étape.</li>
+        <li><strong>Architecture fullstack :</strong> backend Spring Boot / Java 25, frontend Next.js 16 déployé sur Vercel, PostgreSQL, Traefik v3 reverse proxy SSL.</li>
+      </ul>
+      <div class="tags-container">
+        <span class="tag">Java 25</span><span class="tag">Spring Boot</span><span class="tag">Next.js 16</span>
+        <span class="tag">PostgreSQL</span><span class="tag">MinIO</span><span class="tag">SonarQube</span>
+        <span class="tag">Semgrep</span><span class="tag">OWASP</span><span class="tag">Trivy</span>
+        <span class="tag">Traefik</span><span class="tag">Docker</span><span class="tag">OVH VPS</span>
+        <span class="tag">Claude Code</span>
+      </div>
+    </div>
+
+    <!-- Knido -->
+    <div class="mission-block">
+      <div class="mission-client">Knido &amp; Knido Mobile</div>
+      <div class="mission-meta">Plateforme communautaire et marketplace — arts textiles (tricot, crochet, couture, broderie)</div>
+      <div class="mission-desc">
+        Gestion de stock, catalogue de patrons, communauté, abonnement Premium et application mobile native iOS/Android.
+      </div>
+      <ul class="realisations-list">
+        <li><strong>Web + mobile sur API tRPC partagée :</strong> Next.js 16 / App Router pour le web, Expo + expo-router pour le mobile, zéro duplication de logique métier, build cloud iOS/Android via EAS.</li>
+        <li><strong>E-commerce &amp; marketplace :</strong> achat de patrons via Stripe Checkout, abonnement Premium, commission marketplace via Stripe Connect, upload R2 (photos + PDF) avec presigned URLs.</li>
+      </ul>
+      <div class="tags-container">
+        <span class="tag">Next.js 16</span><span class="tag">Expo</span><span class="tag">TypeScript</span>
+        <span class="tag">tRPC</span><span class="tag">Drizzle</span><span class="tag">PostgreSQL</span>
+        <span class="tag">Auth.js</span><span class="tag">Stripe</span><span class="tag">Stripe Connect</span>
+        <span class="tag">Cloudflare R2</span><span class="tag">NativeWind</span><span class="tag">EAS Build</span>
+        <span class="tag">Docker</span><span class="tag">Jenkins</span><span class="tag">Claude Code</span>
+      </div>
+    </div>
+
+    <!-- Autres projets -->
+    <div class="section">
+      <div class="section-title">Autres projets (autonomie complète, conception → déploiement)</div>
+      <div class="projects-box">
+        <div class="projects-box-content" style="font-size:9.5pt; line-height:1.7;">
+          <strong>Jeux mobiles Godot :</strong> Fruitower, Valcœur, Last Zombie Ride, Knitting Tycoon — pipeline d'assets Midjourney intégré.<br>
+          <strong>SaaS &amp; sites web :</strong> Doctura (GED Santé), Atelier du Fil, Carnet d'Route (Kotlin/Ktor + Angular + Helm/K8s), Mission Tracker (scraper temps réel 24 plateformes freelance), Le Vallon des Kangourous (Next.js + Payload CMS), site Lasserre Consulting (Angular 21).<br>
+          <strong>Outil de migration :</strong> analyseur AST Java legacy pour migration COBOL → Java 25, rapport HTML Angular — secteur bancaire.
+        </div>
+      </div>
+    </div>
+
+    <!-- VPS -->
+    <div class="section">
+      <div class="section-title">Infrastructure VPS mutualisée</div>
+      <div style="font-size:9.5pt; color:#334155; line-height:1.65;">
+        VPS auto-hébergé durci (SSH par clé uniquement, fail2ban, rate limiting nginx + applicatif), hébergeant l'ensemble des projets.
+        Agent Claude exécuté quotidiennement pour un audit de sécurité automatisé : revue des logs, vérification des CVE, contrôle des configurations, alerting sur anomalies.
+      </div>
+    </div>
+
+  </div>
+</div><!-- /page 3 — projets persos part 2 -->
+
+
+<!-- ══════════════════════════════════════════════════════
+     PAGE 4 — DATARAXYS / NUAMOUV (2024–2025)
 ══════════════════════════════════════════════════════ -->
 <div class="page">
 
