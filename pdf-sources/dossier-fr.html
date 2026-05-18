@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arnaud Lasserre — Dossier de compétences</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 10px;
+    color: #1e293b;
+    background: white;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    background: white;
+    page-break-after: always;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page:last-child { page-break-after: avoid; }
+
+  /* ─── PAGE 1 : PROFIL ─── */
+  .page-profil {
+    padding: 14mm 14mm 10mm 14mm;
+  }
+
+  .profil-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 6mm;
+  }
+
+  .profil-name { font-size: 36px; font-weight: 800; color: #0f172a; letter-spacing: -1px; }
+  .profil-role { font-size: 12px; color: #64748b; font-weight: 400; margin-top: 2px; }
+
+  .exp-badge {
+    border: 1.5px solid #1e293b;
+    padding: 6px 12px;
+    text-align: center;
+    border-radius: 4px;
+  }
+  .exp-badge-num { font-size: 22px; font-weight: 800; color: #0f172a; }
+  .exp-badge-label { font-size: 9px; color: #64748b; }
+
+  .divider { border: none; border-top: 1px solid #e2e8f0; margin: 4mm 0; }
+
+  .intro-box {
+    border-left: 3px solid #2563eb;
+    padding: 8px 12px;
+    background: #f8fafc;
+    border-radius: 0 4px 4px 0;
+    font-size: 9.5px;
+    line-height: 1.65;
+    color: #334155;
+    margin-bottom: 4mm;
+  }
+
+  .available {
+    font-size: 9.5px;
+    font-weight: 600;
+    color: #2563eb;
+    margin-bottom: 5mm;
+  }
+
+  .section-title {
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #2563eb;
+    text-transform: uppercase;
+    margin-bottom: 3mm;
+    margin-top: 5mm;
+  }
+
+  .comp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 16px;
+    margin-bottom: 3mm;
+  }
+
+  .comp-item {
+    font-size: 9px;
+    color: #334155;
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    line-height: 1.4;
+  }
+
+  .comp-num {
+    color: #2563eb;
+    font-weight: 700;
+    min-width: 14px;
+    font-size: 8.5px;
+  }
+
+  .methodologies {
+    font-size: 9px;
+    color: #334155;
+    margin-bottom: 5mm;
+  }
+
+  .methodologies strong { font-weight: 600; }
+
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 3mm;
+  }
+
+  .tech-col {
+    padding: 6px 8px;
+    border-right: 1px solid #e2e8f0;
+  }
+
+  .tech-col:last-child { border-right: none; }
+
+  .tech-col-title {
+    font-size: 7.5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  .tech-item {
+    font-size: 8.5px;
+    color: #334155;
+    line-height: 1.7;
+  }
+
+  .tech-item-light {
+    font-size: 8.5px;
+    color: #94a3b8;
+    font-style: italic;
+  }
+
+  .formation-table { width: 100%; border-collapse: collapse; margin-bottom: 3mm; }
+
+  .formation-row td {
+    padding: 3px 0;
+    font-size: 9px;
+    vertical-align: top;
+    color: #334155;
+    line-height: 1.5;
+  }
+
+  .formation-year {
+    color: #2563eb;
+    font-weight: 600;
+    width: 22mm;
+    white-space: nowrap;
+  }
+
+  .langues { font-size: 9px; color: #334155; }
+  .langue-native { color: #2563eb; }
+  .langue-sep { color: #94a3b8; margin: 0 6px; }
+
+  /* ─── PAGES EXP / PROJETS ─── */
+  .page-exp { display: flex; flex-direction: column; }
+
+  .exp-header {
+    background: #0f172a;
+    padding: 8mm 14mm 7mm 14mm;
+    color: white;
+  }
+
+  .exp-header-small {
+    font-size: 8px;
+    color: #64748b;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+  }
+
+  .exp-header-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+
+  .exp-header-sub {
+    font-size: 9px;
+    color: #94a3b8;
+  }
+
+  .exp-content {
+    padding: 7mm 14mm 8mm 14mm;
+    flex: 1;
+  }
+
+  .exp-intro {
+    font-size: 9px;
+    color: #475569;
+    line-height: 1.65;
+    margin-bottom: 5mm;
+    padding-bottom: 5mm;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  /* Project cards */
+  .project { margin-bottom: 5mm; padding-bottom: 5mm; border-bottom: 1px solid #f1f5f9; }
+  .project:last-child { border-bottom: none; margin-bottom: 0; }
+
+  .project-title { font-size: 13px; font-weight: 700; color: #0f172a; margin-bottom: 1px; }
+  .project-url { font-size: 9px; color: #2563eb; font-weight: 400; }
+  .project-sub { font-size: 8.5px; color: #2563eb; margin-bottom: 3mm; margin-top: 1px; }
+  .project-desc { font-size: 9px; color: #475569; line-height: 1.6; margin-bottom: 3mm; }
+
+  .project-bullets { list-style: none; margin-bottom: 3mm; }
+
+  .project-bullets li {
+    font-size: 9px;
+    color: #334155;
+    line-height: 1.55;
+    padding-left: 10px;
+    position: relative;
+    margin-bottom: 3px;
+  }
+
+  .project-bullets li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+  }
+
+  .project-bullets li strong { font-weight: 600; color: #0f172a; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 3mm; }
+
+  .tag {
+    font-size: 7.5px;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+    border-radius: 3px;
+    padding: 2px 6px;
+    background: #f8fafc;
+    white-space: nowrap;
+  }
+
+  /* Experience cards */
+  .mission { margin-bottom: 4.5mm; }
+  .mission-title { font-size: 12px; font-weight: 700; color: #0f172a; }
+  .mission-period { font-size: 8.5px; color: #2563eb; margin-bottom: 2px; }
+  .mission-desc { font-size: 9px; color: #475569; line-height: 1.55; margin-bottom: 2.5mm; }
+
+  .mission-bullets { list-style: none; margin-bottom: 2mm; }
+  .mission-bullets li {
+    font-size: 8.5px;
+    color: #334155;
+    line-height: 1.5;
+    padding-left: 10px;
+    position: relative;
+    margin-bottom: 2px;
+  }
+  .mission-bullets li::before { content: "•"; position: absolute; left: 0; color: #2563eb; }
+  .mission-bullets li strong { font-weight: 600; }
+
+  .mission-footer {
+    display: flex;
+    gap: 16mm;
+    margin-top: 2mm;
+  }
+
+  .mission-footer-col { }
+  .mission-footer-label { font-size: 7.5px; color: #2563eb; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+  .mission-footer-val { font-size: 8.5px; color: #334155; }
+
+  /* Highlighted box */
+  .highlight-box {
+    background: #f8fafc;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin-bottom: 3mm;
+  }
+  .highlight-box p { font-size: 8.5px; color: #334155; line-height: 1.6; margin-bottom: 3px; }
+  .highlight-box p strong { font-weight: 700; color: #0f172a; }
+  .highlight-box p:last-child { margin-bottom: 0; }
+
+  .inline-section-title {
+    font-size: 7.5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+    margin-top: 4mm;
+  }
+
+  .mission-divider { border: none; border-top: 1px solid #e2e8f0; margin: 3.5mm 0; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- PAGE 1 — PROFIL                                            -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="page page-profil">
+  <div class="profil-header">
+    <div>
+      <div class="profil-name">ALA</div>
+      <div class="profil-role">Tech Lead Fullstack · Scrum Master</div>
+    </div>
+    <div class="exp-badge">
+      <div class="exp-badge-num">10 ans</div>
+      <div class="exp-badge-label">d'expérience</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="intro-box">
+    Tech Lead Fullstack &amp; Scrum Master avec 10 ans d'expérience, j'interviens sur des projets Java / Angular exigeants aussi bien comme développeur senior que comme leader technique. Habitué aux environnements grands comptes (EDF, Airbus, CNAM, Ministère de l'Agriculture), je prends en charge l'architecture, la qualité du code et le delivery de bout en bout. Disponible pour missions longues en freelance.
+  </div>
+
+  <div class="available">Disponible depuis janvier 2026</div>
+
+  <div class="section-title">Compétences Fonctionnelles Principales</div>
+  <div class="comp-grid">
+    <div class="comp-item"><span class="comp-num">1.</span><span>Développement Back End et Front End (web &amp; mobile)</span></div>
+    <div class="comp-item"><span class="comp-num">2.</span><span>Leadership technique &amp; montée en compétences</span></div>
+    <div class="comp-item"><span class="comp-num">3.</span><span>Architecture logicielle et conception</span></div>
+    <div class="comp-item"><span class="comp-num">4.</span><span>Delivery Agile / Scrum Master</span></div>
+    <div class="comp-item"><span class="comp-num">5.</span><span>Conteneurisation et déploiement (DevOps)</span></div>
+    <div class="comp-item"><span class="comp-num">6.</span><span>Rédaction de documentation technique et fonctionnelle</span></div>
+  </div>
+  <div class="methodologies"><strong>Méthodologies :</strong> Scrum, DevOps, CI/CD</div>
+
+  <div class="section-title">Compétences Techniques</div>
+  <div class="tech-grid">
+    <div class="tech-col">
+      <div class="tech-col-title">Systèmes</div>
+      <div class="tech-item">Linux</div>
+      <div class="tech-item">MacOS</div>
+      <div class="tech-item">Windows</div>
+    </div>
+    <div class="tech-col">
+      <div class="tech-col-title">Langages &amp; Frameworks</div>
+      <div class="tech-item">Java 8→25, Kotlin, Ktor</div>
+      <div class="tech-item">Spring / Spring Boot, Jakarta EE, Vaadin</div>
+      <div class="tech-item">Angular, VueJS, Vuetify, TypeScript</div>
+      <div class="tech-item">Bootstrap, Bash / Cron, Python</div>
+      <div class="tech-item-light">PHP5 (maintenance legacy)</div>
+    </div>
+    <div class="tech-col">
+      <div class="tech-col-title">Bases de Données</div>
+      <div class="tech-item">PostgreSQL</div>
+      <div class="tech-item">MongoDB</div>
+      <div class="tech-item">Oracle</div>
+    </div>
+    <div class="tech-col">
+      <div class="tech-col-title">DevOps &amp; Outils</div>
+      <div class="tech-item"><strong>Kafka</strong> (event streaming)</div>
+      <div class="tech-item">Docker, Kubernetes, OpenShift</div>
+      <div class="tech-item">Jenkins, Nginx</div>
+      <div class="tech-item">Git / GitLab, SVN, Sonar</div>
+      <div class="tech-item">Jira / Confluence</div>
+      <div class="tech-item">IntelliJ IDEA / VS Code</div>
+    </div>
+  </div>
+
+  <div class="section-title">Formations &amp; Certifications</div>
+  <table class="formation-table">
+    <tr class="formation-row">
+      <td class="formation-year">2020</td>
+      <td>Certification DevOps Foundation</td>
+    </tr>
+    <tr class="formation-row">
+      <td class="formation-year">2020</td>
+      <td>Certification Scrum Master I</td>
+    </tr>
+    <tr class="formation-row">
+      <td class="formation-year">2016 – 2018</td>
+      <td>Master 1 : Responsable en Ingénierie des Logiciels</td>
+    </tr>
+    <tr class="formation-row">
+      <td class="formation-year">2013 – 2015</td>
+      <td>BTS : Informatique et Réseau pour l'Industrie et les Services Techniques</td>
+    </tr>
+    <tr class="formation-row">
+      <td class="formation-year">2013</td>
+      <td>Bac : STI2D — Système Information Numérique</td>
+    </tr>
+  </table>
+
+  <div class="section-title">Langues</div>
+  <div class="langues">
+    Français <span class="langue-native">(Maternel)</span>
+    <span class="langue-sep">·</span>
+    Anglais <span class="langue-native">(Professionnel)</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- PAGE 2 — PROJETS PERSONNELS                                -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="page page-exp">
+  <div class="exp-header">
+    <div class="exp-header-small">ALA</div>
+    <div class="exp-header-title">Projets personnels</div>
+    <div class="exp-header-sub">Tech Lead Fullstack — Indépendant &nbsp;·&nbsp; janv. 2026 → maintenant</div>
+  </div>
+
+  <div class="exp-content">
+    <p class="exp-intro">
+      Conception et développement de produits SaaS complets en autonomie totale — de l'architecture au déploiement. Workflow Claude Code systématique sur l'ensemble des projets : pair-programming, génération de tests, refactoring, revues automatisées, conventions documentées via CLAUDE.md / AGENTS.md.
+    </p>
+
+    <!-- ENTREVIA -->
+    <div class="project">
+      <div style="display:flex; align-items:baseline; gap:8px;">
+        <div class="project-title">Entrevia</div>
+        <div class="project-url">— entrevia.dev</div>
+      </div>
+      <div class="project-sub">SaaS de préparation aux entretiens techniques pour développeurs</div>
+      <p class="project-desc">Flashcards en répétition espacée, QCM, simulation d'entretien avec scoring IA (ReScript v11), mode recruteur B2B, abonnements Stripe et extension Chrome. 100+ stacks couvertes (Java, Angular, React, Kotlin, DevOps, IA…).</p>
+      <ul class="project-bullets">
+        <li><strong>Intégration LLM en production :</strong> scoring batch des réponses via Claude Haiku 4.5 (Anthropic SDK), prompt engineering adaptatif selon la difficulté (junior/mid/senior), extraction structurée de stacks depuis offres PDF, gestion des quotas et garde-fous coûts.</li>
+        <li><strong>Architecture frontend moderne :</strong> React 19, ReScript v11, Emotion CSS-in-JS, Turborepo monorepo, Yarn 4 Berry, Turbopack — stack identique aux offres Frontend Senior les plus exigeantes. Accessibilité WCAG, Vitest + RTL + Playwright.</li>
+        <li><strong>Sécurité &amp; paiement :</strong> Auth.js v5 (Google / GitHub OAuth + magic link), webhooks Stripe avec gestion des plans et bonus packs, guards backend pour fonctionnalités premium.</li>
+        <li><strong>Conception bout-en-bout :</strong> architecture, modèle de données (Drizzle + PostgreSQL 17), API type-safe tRPC, i18n FR/EN, PWA offline-first, déploiement VPS (nginx reverse proxy + cache).</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Next.js 16</span>
+        <span class="tag">React 19</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">ReScript v11</span>
+        <span class="tag">Emotion CSS-in-JS</span>
+        <span class="tag">tRPC</span>
+        <span class="tag">Drizzle</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Anthropic SDK</span>
+        <span class="tag">Stripe</span>
+        <span class="tag">Auth.js</span>
+        <span class="tag">Turborepo</span>
+        <span class="tag">Turbopack</span>
+        <span class="tag">Yarn 4</span>
+        <span class="tag">Vitest</span>
+        <span class="tag">Playwright</span>
+        <span class="tag">Docker</span>
+        <span class="tag">nginx</span>
+        <span class="tag">Sentry</span>
+        <span class="tag">Claude Code</span>
+      </div>
+    </div>
+
+    <!-- NORMANCE -->
+    <div class="project">
+      <div class="project-title">Normance</div>
+      <div class="project-sub">Webservice REST B2B — génération automatique de certificats RSE/CSRD pour produits reconditionnés</div>
+      <p class="project-desc">Calcul d'impact carbone ADEME, facturation à l'usage, multi-tenant. Présentation réalisée auprès du n°2 européen du reconditionné informatique.</p>
+      <ul class="project-bullets">
+        <li><strong>API production-ready :</strong> authentification par clés API multi-tenants, rate limiting par plan, webhooks signés, génération PDF à la volée (Puppeteer + QR code), endpoints batch jusqu'à 100 certificats, documentation Swagger auto-générée.</li>
+        <li><strong>Robustesse &amp; exploitation :</strong> queues asynchrones BullMQ + Redis, 36 tests d'intégration Jest, validation Zod sur tous les endpoints, monitoring santé, helmet + CORS.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Node.js</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Fastify</span>
+        <span class="tag">Prisma</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">BullMQ</span>
+        <span class="tag">Redis</span>
+        <span class="tag">Puppeteer</span>
+        <span class="tag">Jest</span>
+        <span class="tag">Zod</span>
+        <span class="tag">Swagger</span>
+        <span class="tag">Claude Code</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- PAGE 3 — PROJETS PERSONNELS (suite)                        -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="page page-exp">
+  <div class="exp-header">
+    <div class="exp-header-small">ALA</div>
+    <div class="exp-header-title">Projets personnels — suite</div>
+    <div class="exp-header-sub">Tech Lead Fullstack — Indépendant &nbsp;·&nbsp; janv. 2026 → maintenant</div>
+  </div>
+
+  <div class="exp-content">
+
+    <!-- LEGACODE -->
+    <div class="project">
+      <div class="project-title">Legacode</div>
+      <div class="project-sub">Plateforme SaaS d'audit de code — tous langages, tous legacy, toutes versions</div>
+      <p class="project-desc">Audit de code universel avec validation experte humaine. Proposition différenciante : <strong>zéro IA ne traite le code client</strong> (RGPD, NDA, secteurs réglementés). Suppression certifiée SHA-256 avec attestation PDF horodatée.</p>
+      <ul class="project-bullets">
+        <li><strong>Orchestration multi-outils :</strong> pipeline SonarQube + Semgrep + OWASP Dependency-Check + Trivy, détection automatique des technologies, rapport expert PDF généré à l'issue de chaque mission.</li>
+        <li><strong>Infrastructure souveraine OVH :</strong> stockage client sur MinIO self-hosted (code ne quitte pas l'infrastructure), traçabilité complète upload → analyse → suppression, hash SHA-256 vérifié à chaque étape.</li>
+        <li><strong>Architecture fullstack :</strong> backend Spring Boot / Java 25, frontend Next.js 16 déployé sur Vercel, PostgreSQL, Traefik v3 reverse proxy SSL.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Java 25</span>
+        <span class="tag">Spring Boot</span>
+        <span class="tag">Next.js 16</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">MinIO</span>
+        <span class="tag">SonarQube</span>
+        <span class="tag">Semgrep</span>
+        <span class="tag">OWASP</span>
+        <span class="tag">Trivy</span>
+        <span class="tag">Traefik</span>
+        <span class="tag">Docker</span>
+        <span class="tag">OVH VPS</span>
+        <span class="tag">Claude Code</span>
+      </div>
+    </div>
+
+    <!-- KNIDO -->
+    <div class="project">
+      <div class="project-title">Knido &amp; Knido Mobile</div>
+      <div class="project-sub">Plateforme communautaire et marketplace — arts textiles (tricot, crochet, couture, broderie)</div>
+      <p class="project-desc">Gestion de stock, catalogue de patrons, communauté, abonnement Premium et application mobile native iOS/Android.</p>
+      <ul class="project-bullets">
+        <li><strong>Web + mobile sur API tRPC partagée :</strong> Next.js 16 / App Router pour le web, Expo + expo-router pour le mobile, zéro duplication de logique métier, build cloud iOS/Android via EAS.</li>
+        <li><strong>E-commerce &amp; marketplace :</strong> achat de patrons via Stripe Checkout, abonnement Premium, commission marketplace via Stripe Connect, upload R2 (photos + PDF) avec presigned URLs.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Next.js 16</span>
+        <span class="tag">Expo</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">tRPC</span>
+        <span class="tag">Drizzle</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Auth.js</span>
+        <span class="tag">Stripe</span>
+        <span class="tag">Stripe Connect</span>
+        <span class="tag">Cloudflare R2</span>
+        <span class="tag">NativeWind</span>
+        <span class="tag">EAS Build</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Jenkins</span>
+        <span class="tag">Claude Code</span>
+      </div>
+    </div>
+
+    <!-- AUTRES PROJETS -->
+    <div class="inline-section-title">Autres Projets (autonomie complète, conception → déploiement)</div>
+    <div class="highlight-box">
+      <p><strong>Jeux mobiles Godot :</strong> Fruitower, Valcœur, Last Zombie Ride, Knitting Tycoon — pipeline d'assets Midjourney intégré.</p>
+      <p><strong>SaaS &amp; sites web :</strong> Doctura (GED Santé), Atelier du Fil, Carnet d'Route (Kotlin/Ktor + Angular + Helm/K8s), Mission Tracker (scraper temps réel 24 plateformes freelance), Le Vallon des Kangourous (Next.js + Payload CMS), site Lasserre Consulting (Angular 21).</p>
+      <p><strong>Outil de migration :</strong> analyseur AST Java legacy pour migration COBOL → Java 25, rapport HTML Angular — secteur bancaire.</p>
+    </div>
+
+    <!-- INFRA VPS -->
+    <div class="inline-section-title">Infrastructure VPS Mutualisée</div>
+    <p style="font-size:9px; color:#475569; line-height:1.6;">
+      VPS auto-hébergé durci (SSH par clé uniquement, fail2ban, rate limiting nginx + applicatif), hébergeant l'ensemble des projets. Agent Claude exécuté quotidiennement pour un audit de sécurité automatisé : revue des logs, vérification des CVE, contrôle des configurations, alerting sur anomalies.
+    </p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- PAGE 4 — DATARAXYS / NUAMOUV (2025)                        -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="page page-exp">
+  <div class="exp-header">
+    <div class="exp-header-small">ALA</div>
+    <div class="exp-header-title">Dataraxys / Nuamouv</div>
+    <div class="exp-header-sub">Tech Lead Fullstack &nbsp;·&nbsp; avril 2025 → déc. 2025 &nbsp;·&nbsp; 8 mois</div>
+  </div>
+
+  <div class="exp-content">
+    <div class="inline-section-title">Projet</div>
+    <p class="exp-intro">
+      Retour en tant que salarié chez Dataraxys à partir d'avril 2025. Prise en charge du périmètre technique des nouveaux clients Nuamouv (transport urbain) ainsi que de la maison mère Prêt à Partir. Développement, maintenance et livraison de nouvelles solutions, accompagnement de l'équipe et pilotage de la qualité.
+    </p>
+
+    <div class="inline-section-title">Réalisations</div>
+    <ul class="mission-bullets" style="margin-bottom:5mm;">
+      <li>Livré <strong>4 clients</strong> avec une billettique complète : tunnel de vente, suivi usager temps réel, cartes QR code, profil de suivi</li>
+      <li>Migré l'ensemble du parc applicatif de <strong>Java 11 → Java 25</strong></li>
+      <li>Conçu et déployé un <strong>outil de signature mail</strong> pour +1 000 collaborateurs du groupe</li>
+      <li>Accompagné et fait monter en compétences le Tech Lead Fullstack de l'équipe</li>
+      <li>Suivi des livraisons sur 3 environnements : Dev / Recette / Pré-prod</li>
+      <li>Développements Back End et Front End sur l'ensemble des projets</li>
+      <li>Suivi et garantie de la qualité des livrables produits</li>
+    </ul>
+
+    <div class="inline-section-title">Environnement Technique</div>
+    <div class="tags" style="margin-top:3px;">
+      <span class="tag">Java / Jakarta EE</span>
+      <span class="tag">VueJS</span>
+      <span class="tag">Vaadin</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">SQL / NoSQL</span>
+      <span class="tag">HTML5 / CSS</span>
+      <span class="tag">Bash / Cron</span>
+      <span class="tag">PHP5 (legacy)</span>
+      <span class="tag">Tomcat</span>
+      <span class="tag">Portainer (Docker)</span>
+      <span class="tag">Nginx</span>
+      <span class="tag">GitLab</span>
+      <span class="tag">IntelliJ IDEA</span>
+      <span class="tag">MS Office</span>
+    </div>
+
+    <div class="mission-footer" style="margin-top:5mm;">
+      <div class="mission-footer-col">
+        <div class="mission-footer-label">Équipe</div>
+        <div class="mission-footer-val">2 Tech Lead · 3 Développeurs Senior · 2 Développeurs</div>
+      </div>
+      <div class="mission-footer-col">
+        <div class="mission-footer-label">Durée</div>
+        <div class="mission-footer-val">8 mois (avril 2025 → déc. 2025)</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- PAGE 5 — ALLIANCE4U — CONSULTANT                           -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="page page-exp">
+  <div class="exp-header">
+    <div class="exp-header-small">ALA</div>
+    <div class="exp-header-title">Alliance4U — Consultant</div>
+    <div class="exp-header-sub">Développeur &amp; Tech Lead Fullstack &nbsp;·&nbsp; juin 2019 → avril 2025 &nbsp;·&nbsp; 5 ans 10 mois</div>
+  </div>
+
+  <div class="exp-content">
+    <p class="exp-intro">
+      Missions de conseil en régie chez des clients grands comptes. Progression du rôle de Développeur Fullstack vers Tech Lead, avec double casquette <strong>Tech Lead + Scrum Master</strong> sur l'une des missions. Secteurs couverts : transport, retail, santé publique, aéronautique, agriculture, énergie.
+    </p>
+
+    <!-- Dataraxys/Nuamouv 2024 -->
+    <div class="mission">
+      <div class="mission-title">Dataraxys / Nuamouv</div>
+      <div class="mission-period">Tech Lead Fullstack &nbsp;·&nbsp; mars 2024 → avril 2025 &nbsp;·&nbsp; 13 mois &nbsp;·&nbsp; <em>dernière mission — transition vers embauche directe</em></div>
+      <p class="mission-desc">Mission de transition précédant le retour en tant que salarié direct chez Dataraxys. Reprise du périmètre technique Nuamouv (transport urbain).</p>
+      <div class="tags" style="margin-top:0;">
+        <span class="tag">Java / Jakarta EE</span>
+        <span class="tag">VueJS</span>
+        <span class="tag">SQL / NoSQL</span>
+        <span class="tag">Portainer (Docker)</span>
+        <span class="tag">Nginx</span>
+        <span class="tag">GitLab</span>
+      </div>
+    </div>
+
+    <hr class="mission-divider">
+
+    <!-- Pharmacies Lafayette -->
+    <div class="mission">
+      <div class="mission-title">Pharmacies Lafayette</div>
+      <div class="mission-period">Tech Lead Fullstack &nbsp;·&nbsp; sept. 2023 → fév. 2024 &nbsp;·&nbsp; 6 mois</div>
+      <p class="mission-desc">Reprise d'un projet non fonctionnel (éléments de production absents du gestionnaire de version) : remise en état, nouveaux développements et livraisons.</p>
+      <ul class="mission-bullets">
+        <li>Audit et remise en état complète du projet</li>
+        <li>Suivi des livraisons sur 2 environnements Recette / Pré-prod</li>
+      </ul>
+      <div class="tags" style="margin-top:0;">
+        <span class="tag">.NET</span>
+        <span class="tag">AngularJS</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Git</span>
+        <span class="tag">Jira</span>
+        <span class="tag">Confluence</span>
+        <span class="tag">VS Code</span>
+      </div>
+    </div>
+
+    <hr class="mission-divider">
+
+    <!-- CNAM -->
+    <div class="mission">
+      <div class="mission-title">CNAM — Mon Espace Santé</div>
+      <div class="mission-period">Tech Lead Fullstack &amp; Scrum Master &nbsp;·&nbsp; août 2022 → août 2023 &nbsp;·&nbsp; 1 an</div>
+      <p class="mission-desc">Développement de la messagerie sécurisée de Mon Espace Santé permettant aux professionnels de santé de converser avec leurs patients.</p>
+      <ul class="mission-bullets">
+        <li>Animation des cérémonies Scrum pour une équipe de 15 personnes (1 SM, 1 BA, 1 PO, 2 TL, 7 Dev, 2 alternants)</li>
+        <li>Montée en compétences de l'équipe TL Fullstack et des alternants</li>
+        <li>Mise à niveau qualité : bonnes pratiques, Sonar, couverture de tests</li>
+        <li>Livraisons sur 3 environnements Dev / Recette / Pré-prod</li>
+      </ul>
+      <div class="tags" style="margin-top:0;">
+        <span class="tag">Java</span>
+        <span class="tag">Spring</span>
+        <span class="tag">VueJS</span>
+        <span class="tag">Vuetify</span>
+        <span class="tag">Angular</span>
+        <span class="tag">Kafka</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Jenkins</span>
+        <span class="tag">Sonar</span>
+        <span class="tag">Jira</span>
+        <span class="tag">Confluence</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- PAGE 6 — ALLIANCE4U — CONSULTANT (suite)                   -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="page page-exp">
+  <div class="exp-header">
+    <div class="exp-header-small">ALA</div>
+    <div class="exp-header-title">Alliance4U — Consultant</div>
+    <div class="exp-header-sub">Développeur &amp; Tech Lead Fullstack &nbsp;·&nbsp; juin 2019 → avril 2025 &nbsp;·&nbsp; suite</div>
+  </div>
+
+  <div class="exp-content">
+
+    <!-- Airbus -->
+    <div class="mission">
+      <div class="mission-title">Airbus</div>
+      <div class="mission-period">Tech Lead Fullstack &nbsp;·&nbsp; jan. 2022 → août 2022 &nbsp;·&nbsp; 7 mois</div>
+      <p class="mission-desc">Développement et maintenance d'un client lourd de planification de flotte aérienne.</p>
+      <ul class="mission-bullets">
+        <li>Coordination et création de tâches avec des équipes anglophones</li>
+        <li>Montée en compétences d'un Tech Lead Fullstack Junior</li>
+      </ul>
+      <div class="tags" style="margin-top:0;">
+        <span class="tag">Java</span>
+        <span class="tag">Spring</span>
+        <span class="tag">Swing</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Git</span>
+        <span class="tag">Jira</span>
+        <span class="tag">Confluence</span>
+        <span class="tag">NetBeans</span>
+      </div>
+    </div>
+
+    <hr class="mission-divider">
+
+    <!-- Ministère -->
+    <div class="mission">
+      <div class="mission-title">Ministère de l'Agriculture</div>
+      <div class="mission-period">Consultant Développeur Fullstack &nbsp;·&nbsp; mars 2021 → déc. 2021 &nbsp;·&nbsp; 7 mois</div>
+      <p class="mission-desc">Site de gestion pour la pêche professionnelle et loisir.</p>
+      <ul class="mission-bullets">
+        <li>Rédaction de plans de test et développement par lots</li>
+        <li>Qualité code : vérification Sonar et tests croisés</li>
+      </ul>
+      <div class="tags" style="margin-top:0;">
+        <span class="tag">Java / SpringBoot</span>
+        <span class="tag">Framework ORION</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">SVN</span>
+        <span class="tag">Jira</span>
+        <span class="tag">Confluence</span>
+        <span class="tag">NetBeans</span>
+      </div>
+    </div>
+
+    <hr class="mission-divider">
+
+    <!-- Thales -->
+    <div class="mission">
+      <div class="mission-title">Thales Alenia Space</div>
+      <div class="mission-period">Consultant Développeur Fullstack &nbsp;·&nbsp; fév. 2020 → avr. 2020 &nbsp;·&nbsp; 2 mois</div>
+      <p class="mission-desc">Développement et maintenance d'une application de contrôle et d'analyse satellite.</p>
+      <ul class="mission-bullets">
+        <li>Réécriture et découpage des tests d'intégration existants</li>
+        <li>Adaptation des scénarios de tests aux besoins des équipes de test</li>
+        <li>Amélioration de la lisibilité, de la compréhension et de la maintenabilité des tests</li>
+      </ul>
+      <div class="tags" style="margin-top:0;">
+        <span class="tag">Java</span>
+        <span class="tag">Angular</span>
+        <span class="tag">Git</span>
+        <span class="tag">Jira</span>
+      </div>
+    </div>
+
+    <hr class="mission-divider">
+
+    <!-- EDF -->
+    <div class="mission">
+      <div class="mission-title">EDF</div>
+      <div class="mission-period">Consultant Développeur Fullstack &nbsp;·&nbsp; juin 2019 → jan. 2020 &nbsp;·&nbsp; 7 mois</div>
+      <p class="mission-desc">Supervision des applications EDF pour le marché affaire.</p>
+      <ul class="mission-bullets">
+        <li>Conception et livraison de librairies partagées adoptées par les équipes EDF</li>
+        <li>Développement du site de supervision des applications</li>
+        <li>Formations et réunions pour l'implémentation des librairies</li>
+      </ul>
+      <div class="tags" style="margin-top:0;">
+        <span class="tag">Java</span>
+        <span class="tag">VueJS / Vuetify</span>
+        <span class="tag">Angular</span>
+        <span class="tag">Python</span>
+        <span class="tag">Kafka</span>
+        <span class="tag">Kubernetes</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Nginx</span>
+        <span class="tag">OpenShift</span>
+        <span class="tag">GitLab</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- PAGE 7 — DATARAXYS (2016-2019)                             -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="page page-exp">
+  <div class="exp-header">
+    <div class="exp-header-small">ALA</div>
+    <div class="exp-header-title">Dataraxys / Nuamouv</div>
+    <div class="exp-header-sub">Développeur Fullstack &nbsp;·&nbsp; fév. 2016 → juin 2019 &nbsp;·&nbsp; 3 ans</div>
+  </div>
+
+  <div class="exp-content">
+    <div class="inline-section-title">Projet</div>
+    <p class="exp-intro">
+      Développement de solutions internes et externes pour le groupe Prêt à Partir. Première expérience professionnelle dans une startup à taille humaine, de la conception jusqu'à la mise en production — couvrant l'intégralité du périmètre métier : transport, voyage, thalasso, vente en ligne.
+    </p>
+
+    <div class="inline-section-title">Réalisations</div>
+    <ul class="mission-bullets" style="margin-bottom:5mm;">
+      <li>Mise en place de projets internes de A à Z : solution RH (Java/Vaadin – MongoDB), parrainage voyage &amp; thalasso (Java/Jakarta EE – Webservice)</li>
+      <li>Optimisation des projets existants : transport, voyage, thalasso, vente en ligne</li>
+      <li>Migration de l'ensemble de l'infrastructure vers Docker</li>
+      <li>Gestion des configurations : variables globales, multi-environnements, gestion des versions</li>
+      <li>Configuration d'équipements Android et livraison au client</li>
+      <li>Présentation et formation auprès de clients</li>
+      <li>Création et surveillance des dépôts Git + suivi qualité du code</li>
+    </ul>
+
+    <div class="inline-section-title">Environnement Technique</div>
+    <div class="tags" style="margin-top:3px;">
+      <span class="tag">Java / Jakarta EE</span>
+      <span class="tag">Vaadin</span>
+      <span class="tag">VueJS</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">PHP5</span>
+      <span class="tag">SQL / NoSQL</span>
+      <span class="tag">HTML5 / CSS</span>
+      <span class="tag">Bash / Cron</span>
+      <span class="tag">Tomcat</span>
+      <span class="tag">Portainer (Docker)</span>
+      <span class="tag">Nginx</span>
+      <span class="tag">GitLab</span>
+      <span class="tag">IntelliJ IDEA</span>
+    </div>
+
+    <div class="mission-footer" style="margin-top:5mm;">
+      <div class="mission-footer-col">
+        <div class="mission-footer-label">Équipe</div>
+        <div class="mission-footer-val">2 Tech Lead · 2 Développeurs</div>
+      </div>
+      <div class="mission-footer-col">
+        <div class="mission-footer-label">Durée</div>
+        <div class="mission-footer-val">3 ans (fév. 2016 → juin 2019)</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
