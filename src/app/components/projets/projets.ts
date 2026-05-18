@@ -15,8 +15,8 @@ export class Projets {
       color: '#2563eb',
       title: 'Entrevia',
       url: 'https://entrevia.dev',
-      description: $localize`:@@projets.entrevia.desc:Plateforme de préparation aux entretiens techniques pour développeurs. Flashcards en répétition espacée, simulation d'entretien, scoring IA et 100+ stacks couvertes (Java, Angular, React, Kotlin, DevOps, IA…).`,
-      tags: ['Next.js', 'TypeScript', 'PostgreSQL', 'IA', 'SaaS'],
+      description: $localize`:@@projets.entrevia.desc:Plateforme SaaS de préparation aux entretiens techniques. Flashcards en répétition espacée, QCM, simulation d'entretien avec scoring IA (ReScript v11), mode recruteur B2B, abonnements Stripe et extension Chrome. 100+ stacks couvertes.`,
+      tags: ['Next.js 16', 'React 19', 'TypeScript', 'ReScript v11', 'Emotion', 'tRPC', 'Turborepo', 'Turbopack', 'Vitest', 'Playwright', 'PostgreSQL', 'Stripe'],
     },
     {
       color: '#059669',

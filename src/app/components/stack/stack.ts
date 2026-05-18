@@ -106,6 +106,11 @@ export class Stack {
           icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#cc785c" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="2.5" fill="#cc785c" stroke="none"/><line x1="12" y1="2" x2="12" y2="6.5"/><line x1="12" y1="17.5" x2="12" y2="22"/><line x1="2" y1="12" x2="6.5" y2="12"/><line x1="17.5" y1="12" x2="22" y2="12"/><line x1="5.22" y1="5.22" x2="8.46" y2="8.46"/><line x1="15.54" y1="15.54" x2="18.78" y2="18.78"/><line x1="18.78" y1="5.22" x2="15.54" y2="8.46"/><line x1="8.46" y1="15.54" x2="5.22" y2="18.78"/></svg>`
         },
         {
+          name: 'Claude Code',
+          color: '#cc785c',
+          icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#cc785c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 8h6M7 12h10M7 16h4"/><circle cx="18" cy="8" r="1.5" fill="#cc785c" stroke="none"/></svg>`
+        },
+        {
           name: 'Cursor',
           color: '#8b5cf6',
           icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l7.5 18 3-7.5L21 10.5z"/><path d="M13.5 13.5L21 21"/></svg>`

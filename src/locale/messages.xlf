@@ -514,7 +514,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="projets.entrevia.desc" datatype="html">
-        <source>Plateforme de préparation aux entretiens techniques pour développeurs. Flashcards en répétition espacée, simulation d&apos;entretien, scoring IA et 100+ stacks couvertes (Java, Angular, React, Kotlin, DevOps, IA…).</source>
+        <source>Plateforme SaaS de préparation aux entretiens techniques. Flashcards en répétition espacée, QCM, simulation d&apos;entretien avec scoring IA (ReScript v11), mode recruteur B2B, abonnements Stripe et extension Chrome. 100+ stacks couvertes.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/projets/projets.ts</context>
           <context context-type="linenumber">1</context>

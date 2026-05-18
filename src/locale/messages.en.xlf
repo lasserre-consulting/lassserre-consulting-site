@@ -295,8 +295,8 @@
         <target>I believe delivery quality starts with clear communication. No grey areas, no wishful estimates — just a reliable technical partner who adapts to your context and is committed to the success of your project.</target>
       </trans-unit>
       <trans-unit id="projets.entrevia.desc" datatype="html">
-        <source>Plateforme de préparation aux entretiens techniques pour développeurs. Flashcards en répétition espacée, simulation d&apos;entretien, scoring IA et 100+ stacks couvertes (Java, Angular, React, Kotlin, DevOps, IA…).</source>
-        <target>Technical interview preparation platform for developers. Spaced-repetition flashcards, mock interview simulation, AI scoring and 100+ stacks covered (Java, Angular, React, Kotlin, DevOps, AI…).</target>
+        <source>Plateforme SaaS de préparation aux entretiens techniques. Flashcards en répétition espacée, QCM, simulation d&apos;entretien avec scoring IA (ReScript v11), mode recruteur B2B, abonnements Stripe et extension Chrome. 100+ stacks couvertes.</source>
+        <target>SaaS platform for technical interview preparation. Spaced-repetition flashcards, QCM, mock interview simulation with AI scoring (ReScript v11), B2B recruiter mode, Stripe subscriptions and Chrome extension. 100+ stacks covered.</target>
       </trans-unit>
       <trans-unit id="app.skip" datatype="html">
         <source>Aller au contenu</source>
