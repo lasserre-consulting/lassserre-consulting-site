@@ -1,0 +1,18 @@
+<button
+  class="a11y-btn"
+  (click)="toggle()"
+  [class.a11y-btn--active]="active"
+  [attr.aria-pressed]="active"
+  aria-label="Mode accessibilité visuelle"
+  i18n-aria-label="@@a11y.toggle.aria"
+  title="Mode daltonisme / contraste élevé">
+  <!-- Icône œil SVG accessible -->
+  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+    <circle cx="12" cy="12" r="3"/>
+    @if (active) {
+      <line x1="1" y1="1" x2="23" y2="23"/>
+    }
+  </svg>
+  <span class="a11y-label" i18n="@@a11y.toggle.label">Accessibilité</span>
+</button>

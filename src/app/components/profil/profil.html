@@ -1,0 +1,88 @@
+<section id="profil" class="profil-section" aria-label="Profil" i18n-aria-label="@@profil.badge">
+  <div class="profil-container">
+
+    <!-- Badge -->
+    <div class="profil-header">
+      <span class="profil-badge" i18n="@@profil.badge">Profil</span>
+    </div>
+
+    <!-- Card -->
+    <div class="profil-card" appScrollReveal>
+
+      <!-- Photo -->
+      <div class="profil-photo-wrapper">
+        <img
+          ngSrc="/images/profil.png"
+          width="120"
+          height="120"
+          alt="Portrait d'Arnaud Lasserre, consultant fullstack"
+          class="profil-photo"
+        />
+      </div>
+
+      <!-- Infos -->
+      <div class="profil-info">
+        <p class="profil-name">Arnaud Lasserre</p>
+        <p class="profil-roles" i18n="@@profil.roles">
+          Consultant Fullstack Senior · Tech Lead · Freelance
+        </p>
+
+        <p class="profil-location">
+          <svg class="profil-location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span i18n="@@profil.location">Toulouse · Remote</span>
+        </p>
+
+        <p class="profil-bio" i18n="@@profil.bio">
+          10 ans de code, une conviction : les meilleurs projets naissent
+          d'une vraie relation de confiance. J'interviens en missions longue
+          durée là où la technique rencontre les enjeux métier.
+        </p>
+
+        <!-- CTAs -->
+        <div class="profil-cta-group">
+
+          <a
+            class="profil-cta profil-cta--linkedin"
+            href="https://www.linkedin.com/in/lasserrearnaud/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z"/>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+
+          <a
+            class="profil-cta profil-cta--malt"
+            href="https://www.malt.fr/profile/arnaudlasserre1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span i18n="@@profil.cta.malt">Malt</span>
+          </a>
+
+          <a
+            class="profil-cta profil-cta--pdf"
+            [href]="pdfHref"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="9" y1="14" x2="15" y2="14"/>
+              <line x1="9" y1="18" x2="15" y2="18"/>
+            </svg>
+            <span i18n="@@profil.cta.pdf">Dossier de compétences</span>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

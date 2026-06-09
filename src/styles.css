@@ -2,3 +2,179 @@
 html {
   scroll-behavior: smooth;
 }
+
+[appScrollReveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+[appScrollReveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Accessibilité globale ──────────────────────────────────────────────── */
+
+/* WCAG 2.4.7 — Focus visible sur tous les éléments interactifs */
+:where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Sur fonds sombres (hero, projets, stack, contact) */
+.hero :focus-visible,
+.projets-section :focus-visible,
+.stack-section :focus-visible,
+.contact-section :focus-visible,
+.lang-btn:focus-visible {
+  outline-color: #93c5fd;
+}
+
+/* Utilitaire screen-reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Skip link (navigation clavier) */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: #2563eb;
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  z-index: 9999;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* WCAG 2.3.3 — Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [appScrollReveal],
+  .profil-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Prévention du scroll horizontal global */
+html,
+body {
+  overflow-x: clip;
+}
+
+/* ── Mode accessibilité visuelle (daltonisme-safe + contraste élevé) ─────── */
+
+html.a11y-mode {
+  /* Palette daltonisme-safe : suppression des rouges/verts ambigus,
+     renforcement des contrastes, bleus accentués */
+  --a11y-accent: #1d4ed8;          /* bleu plus sombre, meilleur contraste */
+  --a11y-accent-light: #2563eb;
+  --a11y-text-primary: #0a0f1e;    /* noir plus profond */
+  --a11y-text-secondary: #334155;  /* gris plus foncé */
+  --a11y-bg: #ffffff;
+  --a11y-bg-dark: #020817;
+  --a11y-border: #94a3b8;          /* bordures plus visibles */
+  --a11y-success: #0369a1;         /* bleu au lieu de vert (deutéranopie-safe) */
+  --a11y-error: #7c3aed;           /* violet au lieu de rouge (deutéranopie-safe) */
+  --a11y-malt: #c2410c;            /* orange foncé au lieu de rouge-rose */
+}
+
+/* Renforcement global des contrastes */
+html.a11y-mode body {
+  color: #0a0f1e;
+}
+
+/* Sections claires */
+html.a11y-mode .expertise-section,
+html.a11y-mode .about-section,
+html.a11y-mode .profil-section {
+  background: #f0f4f8;
+}
+
+/* Sections sombres — fond encore plus sombre */
+html.a11y-mode .hero,
+html.a11y-mode .projets-section,
+html.a11y-mode .stack-section,
+html.a11y-mode .contact-section {
+  background: #020817;
+}
+
+/* Accent partout */
+html.a11y-mode .section-badge,
+html.a11y-mode .about-label,
+html.a11y-mode .profil-badge,
+html.a11y-mode .contact-badge {
+  color: #1d4ed8;
+  background: rgba(29, 78, 216, 0.12);
+  border-color: rgba(29, 78, 216, 0.3);
+}
+
+/* Boutons primaires */
+html.a11y-mode .cta-primary,
+html.a11y-mode .cta-button,
+html.a11y-mode .profil-cta--linkedin {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+}
+html.a11y-mode .cta-primary:hover,
+html.a11y-mode .cta-button:hover {
+  background: #1e3a8a;
+}
+
+/* Badge disponibilité : vert → bleu (deutéranopie-safe) */
+html.a11y-mode .availability-dot {
+  background: #0369a1;
+  box-shadow: 0 0 0 3px rgba(3, 105, 161, 0.3);
+}
+html.a11y-mode .availability-badge {
+  color: #bae6fd;
+  background: rgba(3, 105, 161, 0.15);
+  border-color: rgba(3, 105, 161, 0.3);
+}
+
+/* Malt : rose → orange foncé (daltonisme-safe) */
+html.a11y-mode .profil-cta--malt,
+html.a11y-mode .social-card--malt .social-icon--malt {
+  border-color: #c2410c;
+  background: #c2410c;
+  color: #ffffff;
+}
+
+/* Focus encore plus visible */
+html.a11y-mode :where(a, button, [tabindex]):focus-visible {
+  outline-width: 3px;
+  outline-color: #1d4ed8;
+  outline-offset: 4px;
+}
+
+/* Bordures des cards renforcées */
+html.a11y-mode .card,
+html.a11y-mode .stat-card,
+html.a11y-mode .profil-card {
+  border-color: #94a3b8;
+}

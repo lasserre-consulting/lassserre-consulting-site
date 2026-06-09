@@ -1,0 +1,68 @@
+<section class="about-section" aria-labelledby="about-title">
+  <div class="about-container">
+
+    <!-- Header -->
+    <div class="about-header">
+      <span class="about-label" i18n="@@about.label">À propos</span>
+      <h2 id="about-title" class="about-title" i18n="@@about.title">Mon parcours</h2>
+      <p class="about-intro" i18n="@@about.intro">
+        Après 5 ans chez client final et 4 ans en tant que consultant,
+        je poursuis aujourd'hui mon activité en freelance. Je privilégie
+        les missions longues basées sur la performance, la transparence
+        et l'exigence technique.
+      </p>
+    </div>
+
+    <!-- Statement personnel -->
+    <blockquote class="about-statement" appScrollReveal>
+      <p i18n="@@about.statement">
+        Je crois que la qualité d'un livrable tient d'abord à la clarté des
+        échanges. Pas de zone grise, pas de fausse estimation — juste un
+        interlocuteur technique fiable qui s'adapte au contexte et s'implique
+        dans la réussite du projet.
+      </p>
+    </blockquote>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      @for (stat of stats; track stat.label) {
+        <div class="stat-card" appScrollReveal>
+          <span class="stat-value">{{ stat.value }}</span>
+          <span class="stat-label">{{ stat.label }}</span>
+        </div>
+      }
+    </div>
+
+    <!-- Timeline -->
+    <div class="timeline">
+      @for (item of timeline; track item.period; let i = $index) {
+        <div
+          class="timeline-item"
+          [class.timeline-item--right]="i % 2 !== 0"
+        >
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-period">{{ item.period }}</span>
+              <span class="timeline-tag">{{ item.tag }}</span>
+            </div>
+            <h3 class="timeline-title">{{ item.title }}</h3>
+            <p class="timeline-desc">{{ item.description }}</p>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+      }
+    </div>
+
+    <!-- Values -->
+    <div class="values-grid">
+      @for (value of values; track value.title) {
+        <div class="value-item" appScrollReveal>
+          <div class="value-icon" aria-hidden="true" [innerHTML]="value.icon | safeHtml"></div>
+          <h3 class="value-title">{{ value.title }}</h3>
+          <p class="value-desc">{{ value.description }}</p>
+        </div>
+      }
+    </div>
+
+  </div>
+</section>

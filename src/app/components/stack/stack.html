@@ -1,1 +1,29 @@
-<p>stack works!</p>
+<section class="stack-section" aria-labelledby="stack-title">
+  <div class="stack-container">
+
+    <span class="section-badge" i18n="@@stack.badge">Stack Technique</span>
+    <h2 id="stack-title" class="section-title" i18n="@@stack.title">Les outils de mon quotidien</h2>
+    <p class="section-subtitle" i18n="@@stack.subtitle">Des technologies éprouvées pour des architectures robustes et scalables.</p>
+
+    <div class="categories">
+      @for (category of categories; track category.label) {
+        <div class="category">
+          <h3 class="category-title">{{ category.label }}</h3>
+          <div class="tech-grid">
+            @for (tech of category.techs; track tech.name) {
+              <div
+                appScrollReveal
+                class="tech-card"
+                [style.--accent]="tech.color">
+                <div class="tech-icon" aria-hidden="true" [innerHTML]="tech.icon | safeHtml"></div>
+                <span class="tech-name">{{ tech.name }}</span>
+                <div class="tech-glow"></div>
+              </div>
+            }
+          </div>
+        </div>
+      }
+    </div>
+
+  </div>
+</section>

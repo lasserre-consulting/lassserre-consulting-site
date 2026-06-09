@@ -1,1 +1,166 @@
-<p>presentation works!</p>
+<section class="hero" aria-labelledby="hero-name">
+
+  <!-- Animated background particles -->
+  <div class="particles">
+    @for (p of particles; track p){
+      <span class="particle" [style]="p"></span>
+    }
+  </div>
+
+  <!-- Mesh gradient blobs -->
+  <div class="blob blob--a"></div>
+  <div class="blob blob--b"></div>
+  <div class="blob blob--c"></div>
+
+  <div class="hero-container">
+
+    <!-- Availability badge -->
+    <div class="availability-badge">
+      <span class="availability-dot"></span>
+      <ng-container i18n="@@presentation.available">Disponible pour de nouvelles missions</ng-container>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140" width="200" height="140">
+      <defs>
+        <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#93c5fd;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+
+      <!-- Icon: stylised "AL" monogram inside a diamond -->
+      <g transform="translate(100, 44)">
+        <!-- Diamond shape -->
+        <polygon
+          points="0,-36 32,0 0,36 -32,0"
+          fill="none"
+          stroke="url(#blueGrad)"
+          stroke-width="2"
+        />
+        <!-- Inner diamond (smaller) -->
+        <polygon
+          points="0,-28 24,0 0,28 -24,0"
+          fill="url(#blueGrad)"
+          opacity="0.12"
+        />
+
+        <!-- "A" left stroke -->
+        <line x1="-13" y1="14" x2="0" y2="-14" stroke="url(#blueGrad)" stroke-width="2.2" stroke-linecap="round"/>
+        <!-- "A" right stroke -->
+        <line x1="0" y1="-14" x2="13" y2="14" stroke="url(#blueGrad)" stroke-width="2.2" stroke-linecap="round"/>
+        <!-- "A" crossbar -->
+        <line x1="-7" y1="4" x2="7" y2="4" stroke="url(#blueGrad)" stroke-width="1.8" stroke-linecap="round"/>
+
+
+        <!-- Corner dots at diamond tips -->
+        <circle cx="0"  cy="-36" r="2.2" fill="#3b82f6"/>
+        <circle cx="32" cy="0"   r="2.2" fill="#3b82f6"/>
+        <circle cx="0"  cy="36"  r="2.2" fill="#3b82f6"/>
+        <circle cx="-32" cy="0" r="2.2" fill="#3b82f6"/>
+      </g>
+
+      <!-- Horizontal rule -->
+      <line x1="32" y1="92" x2="168" y2="92" stroke="#3b82f6" stroke-width="0.75" opacity="0.4"/>
+
+      <!-- "LASSERRE" -->
+      <text
+        x="100"
+        y="110"
+        text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="16"
+        font-weight="700"
+        letter-spacing="5"
+        fill="url(#blueGrad)"
+      >LASSERRE</text>
+
+      <!-- "CONSULTING" -->
+      <text
+        x="100"
+        y="126"
+        text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="8"
+        font-weight="400"
+        letter-spacing="4.5"
+        fill="#93c5fd"
+        opacity="0.85"
+      >CONSULTING</text>
+    </svg>
+
+    <!-- Name -->
+    <h1 id="hero-name" class="hero-name">{{ name }}</h1>
+
+    <!-- Photo -->
+    <div class="photo-wrapper">
+      <div class="photo-ring"></div>
+      <img
+        ngSrc="/images/profil.png"
+        alt=""
+        role="presentation"
+        height="180"
+        width="180"
+        class="photo"
+        priority>
+      <div class="photo-glow"></div>
+    </div>
+
+    <!-- Title with animated roles -->
+    <div class="hero-roles">
+      @for (role of roles; track role; let last = $last){
+        <span class="role">
+        {{ role }}
+          @if (!last){
+            <span class="separator">  ·  </span>
+          }
+      </span>
+      }
+
+    </div>
+
+    <!-- Description -->
+    <p class="hero-description">{{ description }}</p>
+
+    <!-- CTAs -->
+    <div class="hero-ctas">
+      <a href="#contact" class="cta-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+        <ng-container i18n="@@presentation.cta.discuss">Discutons de votre projet</ng-container>
+      </a>
+      <a href="#expertise" class="cta-secondary">
+        <ng-container i18n="@@presentation.cta.expertise">Voir mon expertise</ng-container>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"/>
+          <polyline points="19 12 12 19 5 12"/>
+        </svg>
+      </a>
+      <a [href]="pdfHref"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="cta-pdf">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="12" y1="18" x2="12" y2="12"/>
+          <line x1="9" y1="15" x2="15" y2="15"/>
+        </svg>
+        <ng-container i18n="@@presentation.cta.pdf">Dossier de compétences</ng-container>
+      </a>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </div>
+
+  </div>
+</section>

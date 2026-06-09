@@ -1,0 +1,21 @@
+{
+  "name": "Arnaud Lasserre — Consultant Freelance",
+  "short_name": "Lasserre Consulting",
+  "description": "Développeur Fullstack Senior & Tech Lead. Java, Spring Boot, Angular. 10 ans d'expérience.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060d1f",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

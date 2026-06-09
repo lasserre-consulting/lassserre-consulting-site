@@ -1,1 +1,11 @@
-<router-outlet />
+<a href="#main" class="skip-link" i18n="@@app.skip">Aller au contenu</a>
+<nav class="lang-switch" aria-label="Sélecteur de langue" i18n-aria-label="@@app.lang.nav">
+  @if (locale === 'fr') {
+    <a href="/en/" class="lang-btn" hreflang="en">EN</a>
+  } @else {
+    <a href="/fr/" class="lang-btn" hreflang="fr">FR</a>
+  }
+</nav>
+<main id="main">
+  <router-outlet />
+</main>

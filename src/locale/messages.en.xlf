@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="fr" target-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="about.label" datatype="html">
+        <source>À propos</source>
+        <target>About</target>
+      </trans-unit>
+      <trans-unit id="about.title" datatype="html">
+        <source>Mon parcours</source>
+        <target>My journey</target>
+      </trans-unit>
+      <trans-unit id="about.intro" datatype="html">
+        <source> Après 5 ans chez client final et 4 ans en tant que consultant, je poursuis aujourd&apos;hui mon activité en freelance. Je privilégie les missions longues basées sur la performance, la transparence et l&apos;exigence technique. </source>
+        <target> After 5 years at a direct client and 4 years as a consultant, I now run my own freelance practice. I favour long-term contracts built on performance, transparency and technical excellence. </target>
+      </trans-unit>
+      <trans-unit id="about.stat1.value" datatype="html">
+        <source>10 ans</source>
+        <target>10 years</target>
+      </trans-unit>
+      <trans-unit id="about.stat1.label" datatype="html">
+        <source>d&apos;expérience en développement</source>
+        <target>of development experience</target>
+      </trans-unit>
+      <trans-unit id="about.stat2.label" datatype="html">
+        <source>projets livrés</source>
+        <target>projects delivered</target>
+      </trans-unit>
+      <trans-unit id="about.stat3.label" datatype="html">
+        <source>Fullstack pratiqué</source>
+        <target>Fullstack practised</target>
+      </trans-unit>
+      <trans-unit id="about.timeline1.period" datatype="html">
+        <source>2025 – présent</source>
+        <target>2025 – present</target>
+      </trans-unit>
+      <trans-unit id="about.timeline1.tag" datatype="html">
+        <source>Freelance</source>
+        <target>Freelance</target>
+      </trans-unit>
+      <trans-unit id="about.timeline1.title" datatype="html">
+        <source>Consultant indépendant</source>
+        <target>Independent Consultant</target>
+      </trans-unit>
+      <trans-unit id="about.timeline1.desc" datatype="html">
+        <source>Missions longue durée en tant que Tech Lead ou développeur senior. Focus sur la performance, la qualité et la valeur produit.</source>
+        <target>Long-term contracts as Tech Lead or senior developer. Focus on performance, quality and product value.</target>
+      </trans-unit>
+      <trans-unit id="about.timeline2.tag" datatype="html">
+        <source>Consultant</source>
+        <target>Consultant</target>
+      </trans-unit>
+      <trans-unit id="about.timeline2.title" datatype="html">
+        <source>ESN — Conseil &amp; Intégration</source>
+        <target>IT Services — Consulting &amp; Integration</target>
+      </trans-unit>
+      <trans-unit id="about.timeline2.desc" datatype="html">
+        <source>Missions variées en Java / Angular / VueJS chez des clients grands comptes.</source>
+        <target>Various contracts in Java / Angular / VueJS at major enterprise clients.</target>
+      </trans-unit>
+      <trans-unit id="about.timeline3.tag" datatype="html">
+        <source>Client final</source>
+        <target>Direct client</target>
+      </trans-unit>
+      <trans-unit id="about.timeline3.title" datatype="html">
+        <source>Développeur Fullstack</source>
+        <target>Fullstack Developer</target>
+      </trans-unit>
+      <trans-unit id="about.timeline3.desc" datatype="html">
+        <source>Développement, maintenance et déploiement d&apos;une quarantaine de projets au sein d&apos;une startup de 6 personnes en charge de l&apos;intégralité du périmètre métier.</source>
+        <target>Development, maintenance and deployment of around forty projects within a 6-person startup, covering the entire business scope.</target>
+      </trans-unit>
+      <trans-unit id="about.value1.title" datatype="html">
+        <source>Fiabilité</source>
+        <target>Reliability</target>
+      </trans-unit>
+      <trans-unit id="about.value1.desc" datatype="html">
+        <source>Engagements tenus, deadlines respectées, communication proactive.</source>
+        <target>Commitments met, deadlines respected, proactive communication.</target>
+      </trans-unit>
+      <trans-unit id="about.value2.title" datatype="html">
+        <source>Performance</source>
+        <target>Performance</target>
+      </trans-unit>
+      <trans-unit id="about.value2.desc" datatype="html">
+        <source>Code optimisé, architecture scalable, delivery orienté valeur.</source>
+        <target>Optimised code, scalable architecture, value-driven delivery.</target>
+      </trans-unit>
+      <trans-unit id="about.value3.title" datatype="html">
+        <source>Transparence</source>
+        <target>Transparency</target>
+      </trans-unit>
+      <trans-unit id="about.value3.desc" datatype="html">
+        <source>Reporting clair, implication dans les décisions, pas de zone grise.</source>
+        <target>Clear reporting, involvement in decisions, no grey areas.</target>
+      </trans-unit>
+      <trans-unit id="contact.badge" datatype="html">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="contact.title" datatype="html">
+        <source>Travaillons ensemble</source>
+        <target>Let's work together</target>
+      </trans-unit>
+      <trans-unit id="contact.subtitle" datatype="html">
+        <source> Disponible pour missions longue durée.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> Réponse sous <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>24h<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. </source>
+        <target> Available for long-term contracts.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/> Reply within <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>24h<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. </target>
+      </trans-unit>
+      <trans-unit id="contact.cta.mailto" datatype="html">
+        <source>Me contacter</source>
+        <target>Get in touch</target>
+      </trans-unit>
+      <trans-unit id="contact.divider" datatype="html">
+        <source>ou retrouvez-moi sur</source>
+        <target>or find me on</target>
+      </trans-unit>
+      <trans-unit id="contact.location" datatype="html">
+        <source> Basé à Toulouse · Disponible en remote et déplacements </source>
+        <target> Based in Toulouse · Available remotely and on-site </target>
+      </trans-unit>
+      <trans-unit id="contact.copied" datatype="html">
+        <source>Copié !</source>
+        <target>Copied!</target>
+      </trans-unit>
+      <trans-unit id="contact.copy" datatype="html">
+        <source>Copier l&apos;adresse</source>
+        <target>Copy address</target>
+      </trans-unit>
+      <trans-unit id="contact.aria.copied" datatype="html">
+        <source>Adresse copiée</source>
+        <target>Address copied</target>
+      </trans-unit>
+      <trans-unit id="contact.aria.copy" datatype="html">
+        <source>Copier l&apos;adresse email</source>
+        <target>Copy email address</target>
+      </trans-unit>
+      <trans-unit id="expertise.badge" datatype="html">
+        <source>Expertise</source>
+        <target>Expertise</target>
+      </trans-unit>
+      <trans-unit id="expertise.title" datatype="html">
+        <source>Ce que j&apos;apporte à vos projets</source>
+        <target>What I bring to your projects</target>
+      </trans-unit>
+      <trans-unit id="expertise.subtitle" datatype="html">
+        <source>Vision technique, leadership et delivery orienté valeur produit.</source>
+        <target>Technical vision, leadership and value-driven delivery.</target>
+      </trans-unit>
+      <trans-unit id="expertise.fullstack.title" datatype="html">
+        <source>Développement Fullstack</source>
+        <target>Fullstack Development</target>
+      </trans-unit>
+      <trans-unit id="expertise.fullstack.desc" datatype="html">
+        <source>Conception et développement d&apos;applications robustes, scalables et maintenables de bout en bout — du backend Java / Spring Boot à l&apos;interface Angular.</source>
+        <target>End-to-end design and development of robust, scalable and maintainable applications — from the Java / Spring Boot backend to the Angular interface.</target>
+      </trans-unit>
+      <trans-unit id="expertise.techlead.title" datatype="html">
+        <source>Tech Lead</source>
+        <target>Tech Lead</target>
+      </trans-unit>
+      <trans-unit id="expertise.techlead.desc" datatype="html">
+        <source>Définition de l&apos;architecture technique, animation des revues de code, montée en compétences de l&apos;équipe et alignement avec les enjeux produit.</source>
+        <target>Defining technical architecture, facilitating code reviews, upskilling the team and aligning with product goals.</target>
+      </trans-unit>
+      <trans-unit id="expertise.agile.title" datatype="html">
+        <source>Scrum Master</source>
+        <target>Scrum Master</target>
+      </trans-unit>
+      <trans-unit id="expertise.agile.desc" datatype="html">
+        <source>1 an d'expérience Scrum Master certifié (PSM I). Animation des cérémonies, priorisation du backlog, pilotage par les indicateurs et accompagnement de l'équipe vers l'autonomie.</source>
+        <target>1 year of certified Scrum Master experience (PSM I). Facilitating ceremonies, backlog prioritisation, metrics-driven management and coaching the team toward autonomy.</target>
+      </trans-unit>
+      <trans-unit id="presentation.available" datatype="html">
+        <source>Disponible pour de nouvelles missions</source>
+        <target>Available for new contracts</target>
+      </trans-unit>
+      <trans-unit id="presentation.cta.discuss" datatype="html">
+        <source>Discutons de votre projet</source>
+        <target>Let's discuss your project</target>
+      </trans-unit>
+      <trans-unit id="presentation.cta.expertise" datatype="html">
+        <source>Voir mon expertise</source>
+        <target>View my expertise</target>
+      </trans-unit>
+      <trans-unit id="presentation.cta.pdf" datatype="html">
+        <source>Dossier de compétences</source>
+        <target>Skills dossier</target>
+      </trans-unit>
+      <trans-unit id="presentation.role.fullstack" datatype="html">
+        <source>Développeur Fullstack Senior</source>
+        <target>Senior Fullstack Developer</target>
+      </trans-unit>
+      <trans-unit id="presentation.role.techlead" datatype="html">
+        <source>Tech Lead</source>
+        <target>Tech Lead</target>
+      </trans-unit>
+      <trans-unit id="presentation.role.freelance" datatype="html">
+        <source>Consultant Freelance</source>
+        <target>Freelance Consultant</target>
+      </trans-unit>
+      <trans-unit id="presentation.description" datatype="html">
+        <source>Freelance senior basé à Toulouse. J&apos;interviens sur vos projets Java / Angular en tant que développeur ou Tech Lead — architecture, qualité de code, delivery. Créateur d&apos;Entrevia. 10 ans d&apos;expérience.</source>
+        <target>Senior freelance based in Toulouse. I work on your Java / Angular projects as a developer or Tech Lead — architecture, code quality, delivery. Creator of Entrevia. 10 years of experience.</target>
+      </trans-unit>
+      <trans-unit id="projets.badge" datatype="html">
+        <source>Réalisations</source>
+        <target>Projects</target>
+      </trans-unit>
+      <trans-unit id="projets.title" datatype="html">
+        <source>Projets personnels</source>
+        <target>Personal projects</target>
+      </trans-unit>
+      <trans-unit id="projets.subtitle" datatype="html">
+        <source>Des projets construits pour apprendre, expérimenter et résoudre de vrais problèmes. Cliquez sur une carte pour visiter le projet.</source>
+        <target>Projects built to learn, experiment and solve real problems. Click a card to visit the project.</target>
+      </trans-unit>
+      <trans-unit id="projets.card.badge" datatype="html">
+        <source>projet personnel</source>
+        <target>personal project</target>
+      </trans-unit>
+      <trans-unit id="projets.mission.desc" datatype="html">
+        <source>Agrégateur de missions freelance scraping 24 plateformes en temps réel. Centralise les offres, dédoublonne et présente un flux unifié de missions.</source>
+        <target>Freelance contract aggregator scraping 24 platforms in real time. Centralises listings, deduplicates and presents a unified contract feed.</target>
+      </trans-unit>
+      <trans-unit id="projets.carnet.desc" datatype="html">
+        <source>Simulateur de trajet multi-motorisations avec streaming temps réel via Kafka. Compare coûts et émissions selon le type de véhicule.</source>
+        <target>Multi-powertrain journey simulator with real-time streaming via Kafka. Compares costs and emissions by vehicle type.</target>
+      </trans-unit>
+      <trans-unit id="projets.normance.desc" datatype="html">
+        <source>Webservice REST B2B de génération automatique de certificats RSE/CSRD pour produits reconditionnés. Calcul d&apos;impact carbone ADEME, facturation à l&apos;usage, multi-tenant.</source>
+        <target>B2B REST webservice for automatic generation of CSR/CSRD certificates for refurbished products. ADEME carbon impact calculation, usage-based billing, multi-tenant.</target>
+      </trans-unit>
+      <trans-unit id="projets.legacode.desc" datatype="html">
+        <source>Plateforme d&apos;audit de code universelle — tous langages, tous legacy. Zéro IA ne traite le code client (RGPD, NDA). Suppression certifiée SHA-256 avec attestation PDF horodatée.</source>
+        <target>Universal code audit platform — all languages, all legacy. Zero AI processes client code (GDPR, NDA). SHA-256 certified deletion with timestamped PDF attestation.</target>
+      </trans-unit>
+      <trans-unit id="projets.knido.desc" datatype="html">
+        <source>Plateforme communautaire et marketplace pour les arts textiles. Catalogue de patrons, abonnement Premium et application mobile native iOS/Android.</source>
+        <target>Community platform and marketplace for textile arts. Pattern catalogue, Premium subscription and native iOS/Android mobile application.</target>
+      </trans-unit>
+      <trans-unit id="stack.badge" datatype="html">
+        <source>Stack Technique</source>
+        <target>Tech Stack</target>
+      </trans-unit>
+      <trans-unit id="stack.title" datatype="html">
+        <source>Les outils de mon quotidien</source>
+        <target>My everyday tools</target>
+      </trans-unit>
+      <trans-unit id="stack.subtitle" datatype="html">
+        <source>Des technologies éprouvées pour des architectures robustes et scalables.</source>
+        <target>Battle-tested technologies for robust and scalable architectures.</target>
+      </trans-unit>
+      <trans-unit id="stack.category.backend" datatype="html">
+        <source>Backend</source>
+        <target>Backend</target>
+      </trans-unit>
+      <trans-unit id="stack.category.frontend" datatype="html">
+        <source>Frontend</source>
+        <target>Frontend</target>
+      </trans-unit>
+      <trans-unit id="stack.category.devops" datatype="html">
+        <source>DevOps &amp; Cloud</source>
+        <target>DevOps &amp; Cloud</target>
+      </trans-unit>
+      <trans-unit id="stack.category.ai" datatype="html">
+        <source>IA &amp; Outillage</source>
+        <target>AI &amp; Tooling</target>
+      </trans-unit>
+      <trans-unit id="profil.badge" datatype="html">
+        <source>Profil</source>
+        <target>Profile</target>
+      </trans-unit>
+      <trans-unit id="profil.roles" datatype="html">
+        <source>Consultant Fullstack Senior · Tech Lead · Freelance</source>
+        <target>Senior Fullstack Developer · Tech Lead · Freelance</target>
+      </trans-unit>
+      <trans-unit id="profil.location" datatype="html">
+        <source>Toulouse · Remote</source>
+        <target>Toulouse · Remote</target>
+      </trans-unit>
+      <trans-unit id="profil.bio" datatype="html">
+        <source>10 ans de code, une conviction : les meilleurs projets naissent d&apos;une vraie relation de confiance. J&apos;interviens en missions longue durée là où la technique rencontre les enjeux métier.</source>
+        <target>10 years of code, one conviction: the best projects are built on trust. I take on long-term contracts where technical depth meets product thinking.</target>
+      </trans-unit>
+      <trans-unit id="profil.cta.malt" datatype="html">
+        <source>Malt</source>
+        <target>Malt</target>
+      </trans-unit>
+      <trans-unit id="profil.cta.pdf" datatype="html">
+        <source>Dossier de compétences</source>
+        <target>Skills profile</target>
+      </trans-unit>
+      <trans-unit id="about.statement" datatype="html">
+        <source>Je crois que la qualité d&apos;un livrable tient d&apos;abord à la clarté des échanges. Pas de zone grise, pas de fausse estimation — juste un interlocuteur technique fiable qui s&apos;adapte au contexte et s&apos;implique dans la réussite du projet.</source>
+        <target>I believe delivery quality starts with clear communication. No grey areas, no wishful estimates — just a reliable technical partner who adapts to your context and is committed to the success of your project.</target>
+      </trans-unit>
+      <trans-unit id="projets.entrevia.desc" datatype="html">
+        <source>Plateforme SaaS de préparation aux entretiens techniques. Flashcards en répétition espacée, QCM, simulation d&apos;entretien avec scoring IA (ReScript v11), mode recruteur B2B, abonnements Stripe et extension Chrome. 100+ stacks couvertes.</source>
+        <target>SaaS platform for technical interview preparation. Spaced-repetition flashcards, QCM, mock interview simulation with AI scoring (ReScript v11), B2B recruiter mode, Stripe subscriptions and Chrome extension. 100+ stacks covered.</target>
+      </trans-unit>
+      <trans-unit id="app.skip" datatype="html">
+        <source>Aller au contenu</source>
+        <target>Skip to content</target>
+      </trans-unit>
+      <trans-unit id="app.lang.nav" datatype="html">
+        <source>Sélecteur de langue</source>
+        <target>Language selector</target>
+      </trans-unit>
+      <trans-unit id="a11y.toggle.aria" datatype="html">
+        <source>Mode accessibilité visuelle</source>
+        <target>Visual accessibility mode</target>
+      </trans-unit>
+      <trans-unit id="a11y.toggle.label" datatype="html">
+        <source>Accessibilité</source>
+        <target>Accessibility</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

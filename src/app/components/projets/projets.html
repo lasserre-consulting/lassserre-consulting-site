@@ -1,0 +1,65 @@
+<section class="projets-section" aria-labelledby="projets-title">
+  <div class="projets-container">
+
+    <span class="section-badge" i18n="@@projets.badge">Réalisations</span>
+    <h2 id="projets-title" class="section-title" i18n="@@projets.title">Projets personnels</h2>
+    <p class="section-subtitle" i18n="@@projets.subtitle">Des projets construits pour apprendre, expérimenter et résoudre de vrais problèmes. Cliquez sur une carte pour visiter le projet.</p>
+
+    <div class="cards">
+      @for (projet of projets; track projet.title) {
+        @if (projet.url) {
+          <a
+            appScrollReveal
+            class="card card--linked"
+            [href]="projet.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            [style.--accent]="projet.color"
+            [attr.aria-label]="projet.title + ' — ouvre dans un nouvel onglet'">
+
+            <!-- Badge -->
+            <span class="projet-badge" i18n="@@projets.card.badge">projet personnel</span>
+
+            <!-- Content -->
+            <h3 class="card-title">{{ projet.title }}</h3>
+            <p class="card-desc">{{ projet.description }}</p>
+
+            <!-- Tags -->
+            <div class="card-tags">
+              @for (tag of projet.tags; track tag) {
+                <span class="tag">{{ tag }}</span>
+              }
+            </div>
+
+            <!-- Hover glow -->
+            <div class="card-glow"></div>
+          </a>
+        } @else {
+          <div
+            appScrollReveal
+            class="card"
+            [style.--accent]="projet.color">
+
+            <!-- Badge -->
+            <span class="projet-badge" i18n="@@projets.card.badge">projet personnel</span>
+
+            <!-- Content -->
+            <h3 class="card-title">{{ projet.title }}</h3>
+            <p class="card-desc">{{ projet.description }}</p>
+
+            <!-- Tags -->
+            <div class="card-tags">
+              @for (tag of projet.tags; track tag) {
+                <span class="tag">{{ tag }}</span>
+              }
+            </div>
+
+            <!-- Hover glow -->
+            <div class="card-glow"></div>
+          </div>
+        }
+      }
+    </div>
+
+  </div>
+</section>
